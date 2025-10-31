@@ -1,8 +1,10 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using Input = UnityEngine.Input;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class PlatformerController : MonoBehaviour
 {
     private Vector3 _velocity;
@@ -36,6 +38,8 @@ public class PlatformerController : MonoBehaviour
     [SerializeField] private float jumpPower = 18f;
     [SerializeField] private float InitialJumpPower = 6f;
     [SerializeField] private float coyoteTime = 0.04f;
+
+    [SerializeField] private UnityEvent onJump;
 
     Rigidbody2D _rb;
     Collider2D _coll;
@@ -95,6 +99,7 @@ public class PlatformerController : MonoBehaviour
         if (_hasJumped || _currentCoyoteTime <= 0) return;
         if (Input.GetButton("Jump"))
         {
+            if (_isJumping == false) onJump.Invoke();
             _isJumping = true;
 
             var newJump = _currentJumpPower + (1 / (jumpPower - _currentJumpPower) * jumpSpeed * Time.deltaTime);
