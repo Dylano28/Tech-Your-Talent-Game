@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -13,36 +14,70 @@ public class ItemInventory : MonoBehaviour
     public void AddItem(Item newItem, bool holdItem = true)
     {
         if (heldItems.Contains(newItem)) return;
-        if (holdItem) heldItems.Add(newItem);
+
+        Item heldItem = null;
+        if (holdItem)
+        {
+            heldItem = Instantiate(newItem);
+            heldItems.Add(heldItem);
+        }
 
         for (int i = 0; i < newItem.changes.Count; i++)
         {
-            var change = newItem.changes[i];
-            var isEmpty = false;
-            for (int count = 0; count < change.GetType().GetProperties().Length; count++)
-            {
-                var property = change.GetType().GetProperties()[count].GetValue(change);
-                if (property is string && string.IsNullOrEmpty((string)property) == true)
-                {
-                    Debug.LogError("Change " + i.ToString() + " on " + newItem.name + " contains not enough data");
-                    isEmpty = true;
-                    break;
-                }
-            }
-            if (isEmpty) continue;
+            var change = ApplyChanges(newItem.changes[i], i, newItem.name);
 
-            var type = Type.GetType(change.Name);
-            var component = GetComponentFromRoot(type);
-            var target = type.GetField(change.TargetValue);
-            if (target == null)
+            if (heldItem && newItem.IsPermanent == false)
             {
-                Debug.LogError("Field " + change.TargetValue + " is most likely private! (" + i.ToString() + " on item " + newItem.name + ")");
-                continue;
+                heldItem.original.Add(change);
             }
-
-            var typeOfValue = target.GetValue(component).GetType();
-            target.SetValue(component, Convert.ChangeType(change.Value, typeOfValue));
         }
+    }
+
+    public ComponnentDataHolder ApplyChanges(ComponnentDataHolder data, int count, string itemName = "")
+    {
+        var isEmpty = false;
+        for (int prop = 0; prop < data.GetType().GetProperties().Length; prop++)
+        {
+            var property = data.GetType().GetProperties()[prop].GetValue(data);
+            if (property is string && string.IsNullOrEmpty((string)property) == true)
+            {
+                Debug.LogError("Change " + count.ToString() + " on " + itemName + " contains not enough data");
+                isEmpty = true;
+                break;
+            }
+        }
+        if (isEmpty) return null;
+
+        var type = Type.GetType(data.Name);
+        var component = GetComponentFromRoot(type);
+        var target = type.GetField(data.TargetValue);
+        if (target == null)
+        {
+            Debug.LogError("Field " + data.TargetValue + " is most likely private! (" + count.ToString() + " on " + itemName + ")");
+            return null;
+        }
+
+        var originalValue = target.GetValue(component);
+        var originalData = new ComponnentDataHolder(data.Name, data.TargetValue, originalValue.ToString());
+        var typeOfValue = originalValue.GetType();
+        target.SetValue(component, Convert.ChangeType(data.Value, typeOfValue));
+
+        return originalData;
+    }
+
+    public void RemoveItem(int itemIndex)
+    {
+        if (itemIndex > heldItems.Count) return;
+
+        var item = heldItems[itemIndex];
+        if (item.original.Count == 0) return;
+
+        for (int i = 0; i < item.original.Count; i++)
+        {
+            ApplyChanges(item.original[i], i, "(original stats)" + item.name);
+        }
+
+        heldItems.Remove(item);
     }
 
     private Component GetComponentFromRoot(Type usedType)
