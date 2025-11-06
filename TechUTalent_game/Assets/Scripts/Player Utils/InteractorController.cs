@@ -6,6 +6,8 @@ public class InteractorController : MonoBehaviour
 {
     [SerializeField] private UnityEvent onInRange;
     [SerializeField] private UnityEvent leaveRange;
+    [SerializeField] private ItemInventory adjacentInventory;
+    public ItemInventory AdjacentInventory => adjacentInventory;
 
     private bool isInRange;
     private Interactable currentInteractable;
@@ -35,6 +37,6 @@ public class InteractorController : MonoBehaviour
     private void Update()
     {
         if (isInRange == false) return;
-        if (Input.GetButtonDown("Interact") || currentInteractable.AutoInteract) currentInteractable.Interact();
+        if (Input.GetButtonDown("Interact") || currentInteractable.AutoInteract) currentInteractable.Interact(this);
     }
 }
