@@ -34,4 +34,10 @@ public class CollectableHolder : MonoBehaviour
     {
         return collectableIds.Contains(id);
     }
+
+
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
 }
