@@ -5,10 +5,11 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private bool interactOnce;
+    [SerializeField] private bool destroyOnInteract;
     [SerializeField] private bool autoInteract;
     public bool AutoInteract => autoInteract;
 
-    [SerializeField] private UnityEvent onInteract;
+    [SerializeField] public UnityEvent<InteractorController> onInteract;
 
     private bool interacted;
 
@@ -17,11 +18,13 @@ public class Interactable : MonoBehaviour
         GetComponent<Collider2D>().isTrigger = true;
     }
 
-    public void Interact()
+    public void Interact(InteractorController interactor)
     {
         if (interacted) return;
         if (interactOnce == true) interacted = true;
 
-        onInteract.Invoke();
+        onInteract.Invoke(interactor);
+
+        if (destroyOnInteract) Destroy(gameObject);
     }
 }
