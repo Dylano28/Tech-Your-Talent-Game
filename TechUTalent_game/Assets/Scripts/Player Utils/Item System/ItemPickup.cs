@@ -1,17 +1,10 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Interactable))]
-public class ItemPickup : MonoBehaviour
+public class ItemPickup : Pickup
 {
     [SerializeField] private Item item;
 
-    private void Start()
-    {
-        GetComponent<Interactable>().onInteract.AddListener(PickUp);
-    }
-
-
-    private void PickUp(InteractorController interactor)
+    protected override void PickUp(InteractorController interactor)
     {
         if (interactor.AdjacentInventory == null) return;
         var inventory = interactor.AdjacentInventory;
