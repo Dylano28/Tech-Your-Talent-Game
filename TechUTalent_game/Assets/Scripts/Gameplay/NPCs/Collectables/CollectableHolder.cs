@@ -1,16 +1,37 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectableHolder : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static CollectableHolder Instance;
+    public List<string> collectableIds {  get; private set; }
+
+    private void Start()
     {
-        
+        if (Instance != null) Destroy(gameObject);
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddCollectable(Collectable collectable)
     {
-        
+        if (collectableIds.Contains(collectable.ID)) return;
+        collectableIds.Add(collectable.ID);
+    }
+
+    public void RemoveCollectable(Collectable collectable)
+    {
+        if (collectableIds.Contains(collectable.ID) == false) return;
+        collectableIds.Remove(collectable.ID);
+    }
+
+    public bool HasId(Collectable collectable)
+    {
+        return collectableIds.Contains(collectable.ID);
+    }
+
+    public bool HasId(string id)
+    {
+        return collectableIds.Contains(id);
     }
 }

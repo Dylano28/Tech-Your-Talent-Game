@@ -1,16 +1,7 @@
 using UnityEngine;
 
-public class Sticker : MonoBehaviour
+[CreateAssetMenu(fileName = "NewSticker", menuName = "Custom Objects/Data/Collectables/Sticker", order = 1)]
+public class Sticker : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Voeg later toe!
 }
