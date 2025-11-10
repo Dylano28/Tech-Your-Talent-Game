@@ -11,6 +11,8 @@ public class CollectableHolder : MonoBehaviour
     {
         if (Instance != null) Destroy(gameObject);
         Instance = this;
+
+        if (collectableIds == null) collectableIds = new List<string>();
     }
 
     public void AddCollectable(Collectable collectable)
