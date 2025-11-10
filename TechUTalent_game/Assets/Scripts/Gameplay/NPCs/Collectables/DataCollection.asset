@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad0534f3475a4c46bbf4ea92fa5441b, type: 3}
+  m_Name: DataCollection
+  m_EditorClassIdentifier: Assembly-CSharp::DataCollection
+  collectableCollection:
+  - {fileID: 11400000, guid: c26d21ca31269ec4a8997d295c67e9d6, type: 2}
+  - {fileID: 11400000, guid: 08d9e15345fc2534e89557959675586b, type: 2}
+  - {fileID: 11400000, guid: 1b9f04ad89f6b4b42b55a945b44021aa, type: 2}
+  stickerCollection: []
