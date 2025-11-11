@@ -20,7 +20,7 @@ public class Hitbox : MonoBehaviour
     {
         if (GetComponent<Collider2D>() == false)
         {
-            Debug.Log("No collider detected on object " + gameObject.name + "!");
+            Debug.LogError("No collider found on object " + gameObject.name + "!");
             return;
         }
 

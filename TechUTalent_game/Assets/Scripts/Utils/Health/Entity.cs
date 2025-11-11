@@ -7,6 +7,8 @@ public class Entity : MonoBehaviour
 {
     private int _currentHp;
     [SerializeField] private int hp = 1;
+    public int Hp => _currentHp;
+    public int MaxHp => hp;
 
     [SerializeField] private int team = 0;
     public int Team => team;
@@ -33,6 +35,16 @@ public class Entity : MonoBehaviour
 
         var rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
+        
+
+        if (GetComponent<Collider2D>() == false)
+        {
+            Debug.LogError("No collider found on object " + gameObject.name + "!");
+            return;
+        }
+
+        var collider = GetComponent<Collider2D>();
+        collider.isTrigger = true;
     }
 
     public void Hit(int damage)
