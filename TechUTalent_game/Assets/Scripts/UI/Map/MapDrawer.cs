@@ -1,20 +1,31 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class MapDrawer : MonoBehaviour
 {
-    [SerializeField] private Tilemap roomTilemap;
-    [SerializeField] private Material tileMaterial;
-    [SerializeField] private float tileSize = 0.1f;
+    [SerializeField] private string playerTag = "Player";
 
-    private Tilemap mapTilemap;
+    [SerializeField] private float baseSize = 0.1f;
+    [SerializeField] private int drawLayer = 50;
+    [SerializeField] private Tilemap roomTilemap;
+    [SerializeField] private Tile mapTile;
+    [SerializeField] private Tile playerTile;
+
+    private Transform _mapTransform;
+    private Tilemap _mapTilemap;
+    private TilemapRenderer _renderer;
+
+    private List<Vector3Int> _lastPlayerPositions = new List<Vector3Int>();
+
     private const string TILE_MAP_NAME = "Tiles";
 
     private void Start()
     {
         SetupTilemap();
         DrawMap();
+        DrawPlayers();
     }
 
     private void SetupTilemap()
@@ -25,16 +36,22 @@ public class MapDrawer : MonoBehaviour
         child.transform.parent = transform;
         child.name = TILE_MAP_NAME;
 
-        mapTilemap = child.AddComponent<Tilemap>();
+        _mapTransform = child.transform;
+        _mapTilemap = child.AddComponent<Tilemap>();
+        _renderer = child.AddComponent<TilemapRenderer>();
+
+        _renderer.sortingOrder = drawLayer;
+        _mapTransform.localScale = new Vector3(baseSize, baseSize, 0);
     }
 
     public void DrawMap()
     {
-        if (mapTilemap == null) return;
+        if (_mapTilemap == null) return;
+        _mapTilemap.ClearAllTiles();
 
         var bounds = roomTilemap.cellBounds;
         var tiles = roomTilemap.GetTilesBlock(bounds);
-        var positions = new List<Vector2>();
+        var positions = new List<Vector3Int>();
 
         for (int x = 0; x < bounds.size.x; x++)
         {
@@ -43,10 +60,37 @@ public class MapDrawer : MonoBehaviour
                 TileBase currentTile = tiles[x + y * bounds.size.x];
                 if (currentTile == false) continue;
 
-                positions.Add(new Vector2(x, y));
+                positions.Add(new Vector3Int(x, y));
             }
         }
 
-        // Add tile placing logic here
+        foreach (var pos in positions)
+        {
+            _mapTilemap.SetTile(pos + bounds.position, mapTile);
+        }
+    }
+
+    public void DrawPlayers()
+    {
+        if (_mapTilemap == null) return;
+        
+        var players = GameObject.FindGameObjectsWithTag(playerTag);
+        if (players.Length == 0) return;
+
+        foreach (var pos in _lastPlayerPositions)
+        {
+            if (_mapTilemap.HasTile(pos) == false) continue;
+            _mapTilemap.SetTile(pos, null);
+        }
+        _lastPlayerPositions.Clear();
+
+        foreach (var player in players)
+        {
+            var pos = player.transform.position;
+            var tilePos = new Vector3Int(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.y));
+            _lastPlayerPositions.Add(tilePos);
+
+            _mapTilemap.SetTile(tilePos, playerTile);
+        }
     }
 }
