@@ -9,13 +9,13 @@ public class ClickAndDrag : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse2))
+        if (Input.GetButtonDown("Fire3"))
         {
-            _origin = dragObject.position;
+            _origin = Camera.main.ScreenToWorldPoint(Input.mousePosition) - dragObject.position;
             return;
         }
 
-        if (Input.GetKey(KeyCode.Mouse2) == false) return;
+        if (Input.GetButton("Fire3") == false) return;
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var  pos = mousePos - _origin;
