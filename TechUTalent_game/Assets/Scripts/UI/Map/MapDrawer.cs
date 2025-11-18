@@ -8,7 +8,8 @@ public class MapDrawer : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
 
     [SerializeField] private float baseSize = 0.1f;
-    [SerializeField] private int drawLayer = 50;
+    [SerializeField] private int orderInLayer = 50;
+    [SerializeField] private string drawLayer = "UI";
     [SerializeField] private Tilemap roomTilemap;
     [SerializeField] private Tile mapTile;
     [SerializeField] private Tile playerTile;
@@ -21,12 +22,6 @@ public class MapDrawer : MonoBehaviour
 
     private const string TILE_MAP_NAME = "Tiles";
 
-    private void Start()
-    {
-        SetupTilemap();
-        DrawMap();
-        DrawPlayers();
-    }
 
     private void SetupTilemap()
     {
@@ -40,13 +35,14 @@ public class MapDrawer : MonoBehaviour
         _mapTilemap = child.AddComponent<Tilemap>();
         _renderer = child.AddComponent<TilemapRenderer>();
 
-        _renderer.sortingOrder = drawLayer;
+        _renderer.sortingOrder = orderInLayer;
+        _renderer.sortingLayerName = drawLayer;
         _mapTransform.localScale = new Vector3(baseSize, baseSize, 0);
     }
 
     public void DrawMap()
     {
-        if (_mapTilemap == null) return;
+        if (_mapTilemap == null) SetupTilemap();
         _mapTilemap.ClearAllTiles();
 
         var bounds = roomTilemap.cellBounds;
@@ -77,11 +73,7 @@ public class MapDrawer : MonoBehaviour
         var players = GameObject.FindGameObjectsWithTag(playerTag);
         if (players.Length == 0) return;
 
-        foreach (var pos in _lastPlayerPositions)
-        {
-            if (_mapTilemap.HasTile(pos) == false) continue;
-            _mapTilemap.SetTile(pos, null);
-        }
+        RemovePlayers();
         _lastPlayerPositions.Clear();
 
         foreach (var player in players)
@@ -91,6 +83,16 @@ public class MapDrawer : MonoBehaviour
             _lastPlayerPositions.Add(tilePos);
 
             _mapTilemap.SetTile(tilePos, playerTile);
+        }
+    }
+
+    public void RemovePlayers()
+    {
+        if (_lastPlayerPositions.Count == 0) return;
+        foreach (var pos in _lastPlayerPositions)
+        {
+            if (_mapTilemap.HasTile(pos) == false) continue;
+            _mapTilemap.SetTile(pos, null);
         }
     }
 }
