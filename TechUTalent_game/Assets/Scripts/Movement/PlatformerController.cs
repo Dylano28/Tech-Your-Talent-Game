@@ -42,6 +42,7 @@ public class PlatformerController : MonoBehaviour
     private bool _hasLanded; // For landing event
     [SerializeField] private UnityEvent onJump;
     [SerializeField] private UnityEvent onLand;
+    [SerializeField] private UnityEvent onStartMove;
 
     Rigidbody2D _rb;
     Collider2D _coll;
@@ -85,6 +86,8 @@ public class PlatformerController : MonoBehaviour
             _currentXSpeed = 0f;
             return;
         }
+
+        if (_currentXSpeed == 0f && _isGrounded) onStartMove.Invoke(); 
 
         var newAirSpeedMod = 1f;
         if (_isGrounded == false) newAirSpeedMod = airSpeedMod;
