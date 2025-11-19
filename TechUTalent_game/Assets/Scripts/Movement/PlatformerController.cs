@@ -39,7 +39,9 @@ public class PlatformerController : MonoBehaviour
     [SerializeField] private float InitialJumpPower = 6f;
     [SerializeField] private float coyoteTime = 0.04f;
 
+    private bool _hasLanded; // For landing event
     [SerializeField] private UnityEvent onJump;
+    [SerializeField] private UnityEvent onLand;
 
     Rigidbody2D _rb;
     Collider2D _coll;
@@ -129,7 +131,13 @@ public class PlatformerController : MonoBehaviour
             return;
         }
 
-        _velocity.y = _velocity.y < -gravityMax ? -gravityMax : _velocity.y - gravity;
+        var newVelocity = _velocity.y - gravity;
+        if (_velocity.y < -gravityMax)
+        {
+            newVelocity = -gravityMax;
+            _hasLanded = false;
+        }  
+        _velocity.y = newVelocity;
         _currentCoyoteTime = Mathf.Clamp(_currentCoyoteTime - Time.deltaTime, 0, coyoteTime);
     }
 
@@ -138,8 +146,12 @@ public class PlatformerController : MonoBehaviour
     // Always updating
     private void Update()
     {
-        _isGrounded = DetectGround();
+        var newGrounded = DetectGround();
+        if (newGrounded && _hasLanded == false) onLand.Invoke();
+
+        _isGrounded = newGrounded;
         _isOnWall = DetectWalls();
+        if (_isGrounded == true) _hasLanded = true;
     }
 
     private bool DetectGround()
