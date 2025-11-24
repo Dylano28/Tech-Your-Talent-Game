@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class SceneDoor : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
 
+    [SerializeField] private int sceneId = 0;
     [SerializeField] private string doorId = "door";
     [SerializeField] private string nextDoorId = "door";
     public string DoorId => doorId;
@@ -24,7 +26,11 @@ public class SceneDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == playerTag) SceneSetter.instance.NextDoor = nextDoorId;
+        if (collision.tag == playerTag)
+        {
+            SceneSetter.instance.NextDoor = nextDoorId;
+            SceneManager.LoadScene(sceneId);
+        }
     }
 
 
