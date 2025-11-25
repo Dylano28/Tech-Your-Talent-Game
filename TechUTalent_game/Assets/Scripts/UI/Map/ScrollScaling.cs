@@ -11,6 +11,9 @@ public class ScrollScaling : MonoBehaviour
         if (scroll == 0) return;
 
         var scrollValue = new Vector3(scroll, scroll);
-        transform.localScale += scrollValue * scrollStep;
+        var scrollVector = scrollValue * scrollStep;
+        if (transform.localScale.x + scrollVector.x <= scrollStep) return;
+
+        transform.localScale += scrollVector;
     }
 }

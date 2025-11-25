@@ -64,6 +64,7 @@ public class MapDrawer : MonoBehaviour
         {
             _mapTilemap.SetTile(pos + bounds.position, mapTile);
         }
+        _mapTilemap.transform.localPosition = Vector2.zero; // Reset to parent position
     }
 
     public void DrawPlayers()
@@ -84,6 +85,7 @@ public class MapDrawer : MonoBehaviour
 
             _mapTilemap.SetTile(tilePos, playerTile);
         }
+        _mapTilemap.transform.localPosition = Vector3.zero - ((Vector3)_lastPlayerPositions[0] * _mapTilemap.transform.localScale.x);
     }
 
     public void RemovePlayers()

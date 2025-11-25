@@ -6,6 +6,7 @@ public class MapMenu : MonoBehaviour
     [SerializeField] private Transform rootParent;
     [SerializeField] private MapDrawer mapDrawer;
     [SerializeField] private Toggle playerToggle;
+    [SerializeField] private Button recenter;
     [SerializeField] private Color playerToggleColor = Color.blue;
 
     private Color NORMAL_TOGGLE = Color.white;
@@ -22,6 +23,7 @@ public class MapMenu : MonoBehaviour
         toggleImage = playerToggle.GetComponent<Image>();
         playerToggle.isOn = _drawPlayers;
         playerToggle.onValueChanged.AddListener(TogglePlayerToggle);
+        recenter.onClick.AddListener(ReCenter);
         TogglePlayerToggle(_drawPlayers);
 
         DisplayMap();
@@ -55,5 +57,11 @@ public class MapMenu : MonoBehaviour
         _drawPlayers = value;
 
         if (value == false) mapDrawer.RemovePlayers();
+    }
+
+    private void ReCenter()
+    {
+        mapDrawer.transform.localPosition = Vector3.zero;
+        if (_drawPlayers == false) mapDrawer.DrawMap();
     }
 }
