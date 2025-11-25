@@ -79,11 +79,17 @@ public class MapDrawer : MonoBehaviour
 
         foreach (var player in players)
         {
+            var controller = player.GetComponent<PlatformerController>();
+
             var pos = player.transform.position;
             var tilePos = new Vector3Int(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.y));
+            var bottomPos = new Vector3Int(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(tilePos.y - 1));
+            
             _lastPlayerPositions.Add(tilePos);
+            _lastPlayerPositions.Add(bottomPos);
 
             _mapTilemap.SetTile(tilePos, playerTile);
+            _mapTilemap.SetTile(bottomPos, playerTile);
         }
         _mapTilemap.transform.localPosition = Vector3.zero - ((Vector3)_lastPlayerPositions[0] * _mapTilemap.transform.localScale.x);
     }
