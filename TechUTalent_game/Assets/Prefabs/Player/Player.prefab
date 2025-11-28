@@ -391,6 +391,7 @@ MonoBehaviour:
   leaveRange:
     m_PersistentCalls:
       m_Calls: []
+  adjacentController: {fileID: 7914404928844286220}
   adjacentInventory: {fileID: 5790731461324515769}
 --- !u!1 &3885854948053806051
 GameObject:

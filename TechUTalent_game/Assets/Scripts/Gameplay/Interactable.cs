@@ -27,4 +27,6 @@ public class Interactable : MonoBehaviour
 
         if (destroyOnInteract) Destroy(gameObject);
     }
+
+    public void ResetInteractable() => interacted = false; // Used to reset if set to InteractOnce
 }
