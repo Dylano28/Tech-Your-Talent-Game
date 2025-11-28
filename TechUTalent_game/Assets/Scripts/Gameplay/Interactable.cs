@@ -29,4 +29,6 @@ public class Interactable : MonoBehaviour
     }
 
     public void ResetInteractable() => interacted = false; // Used to reset if set to InteractOnce
+
+    public void DisableInteract() => interacted = true; // Disable interaction
 }

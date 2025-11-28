@@ -4,8 +4,8 @@ using UnityEngine.Events;
 public class PatientHelpSequence : MonoBehaviour
 {
     [SerializeField] public UnityEvent onComplete;
-    [SerializeField] public UnityEvent onSucces;
-    [SerializeField] public UnityEvent onFail;
+    [SerializeField] public UnityEvent onSucces; // When minigame is succeeded
+    [SerializeField] public UnityEvent onFail; // When minigame is failed
 
 
     private void Awake()
@@ -17,6 +17,8 @@ public class PatientHelpSequence : MonoBehaviour
     protected void Complete()
     {
         PatientTracker.instance.AddPatient();
+        onComplete.Invoke();
+
         Destroy(gameObject);
     }
 }

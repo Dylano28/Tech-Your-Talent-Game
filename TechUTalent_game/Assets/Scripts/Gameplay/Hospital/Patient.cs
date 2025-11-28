@@ -11,14 +11,16 @@ public class Patient : MonoBehaviour
 
     [SerializeField] public UnityEvent onHelp;
     [SerializeField] public UnityEvent onActive;
+    [SerializeField] public UnityEvent onStop;
 
     private bool _needHelp;
+    private Interactable _interactable;
 
 
     private void Start()
     {
-        var interactable = GetComponent<Interactable>();
-        interactable.onInteract.AddListener(Help);
+        _interactable = GetComponent<Interactable>();
+        _interactable.onInteract.AddListener(Help);
     }
 
 
@@ -28,6 +30,7 @@ public class Patient : MonoBehaviour
     {
         yield return new WaitForSeconds(helpTimeout);
         onActive.Invoke();
+        _interactable.ResetInteractable();
         _needHelp = true;
 
         yield break;
@@ -36,8 +39,6 @@ public class Patient : MonoBehaviour
     public void Help(InteractorController interactor)
     {
         if (_needHelp == false) return;
-
-        onHelp.Invoke();
         _needHelp = false;
 
         var playerController = interactor.AdjacentController ? interactor.AdjacentController : null;
@@ -51,11 +52,14 @@ public class Patient : MonoBehaviour
             sequence.onComplete.AddListener(() => playerController.lockMovement = false);
         }
         sequence.onComplete.AddListener(() => StartCoroutine(HelpLoop()));
+        sequence.onComplete.AddListener(() => onHelp.Invoke());
     }
 
     public void StopHelpLoop()
     {
         StopAllCoroutines();
+        onStop.Invoke();
+        _interactable.DisableInteract();
     }
 
 
