@@ -7,13 +7,14 @@ using UnityEngine.Events;
 public class Patient : MonoBehaviour
 {
     [SerializeField] private List<PatientHelpSequence> sequences;
-    [SerializeField] private float helpTimeout = 6;
 
     [SerializeField] public UnityEvent onHelp;
     [SerializeField] public UnityEvent onActive;
     [SerializeField] public UnityEvent onStop;
 
     private bool _needHelp;
+    public bool NeedHelp => _needHelp;
+
     private Interactable _interactable;
 
 
@@ -24,22 +25,25 @@ public class Patient : MonoBehaviour
     }
 
 
-    public void Activate() => StartCoroutine(HelpLoop());
-
-    private IEnumerator HelpLoop()
+    public void Activate()
     {
-        yield return new WaitForSeconds(helpTimeout);
+        if (_needHelp == true) return;
+
         onActive.Invoke();
         _interactable.ResetInteractable();
         _needHelp = true;
+    }
 
-        yield break;
+    public void Deactivate()
+    {
+        onStop.Invoke();
+        _interactable.DisableInteract();
+        _needHelp = false;
     }
 
     public void Help(InteractorController interactor)
     {
         if (_needHelp == false) return;
-        _needHelp = false;
 
         var playerController = interactor.AdjacentController ? interactor.AdjacentController : null;
         var randomSequence = sequences[Random.Range(0, sequences.Count)];
@@ -51,24 +55,7 @@ public class Patient : MonoBehaviour
             playerController.lockMovement = true;
             sequence.onComplete.AddListener(() => playerController.lockMovement = false);
         }
-        sequence.onComplete.AddListener(() => StartCoroutine(HelpLoop()));
         sequence.onComplete.AddListener(() => onHelp.Invoke());
-    }
-
-    public void StopHelpLoop()
-    {
-        StopAllCoroutines();
-        onStop.Invoke();
-        _interactable.DisableInteract();
-    }
-
-
-    private void OnDestroy()
-    {
-        StopAllCoroutines();
-    }
-    private void OnApplicationQuit()
-    {
-        StopAllCoroutines();
+        sequence.onComplete.AddListener(() => _needHelp = false);
     }
 }
