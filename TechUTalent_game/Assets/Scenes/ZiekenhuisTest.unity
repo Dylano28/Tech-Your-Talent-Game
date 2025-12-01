@@ -5743,57 +5743,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2095426475}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: StopHelpLoop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1619296741}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: StopHelpLoop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1609415380}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: StopHelpLoop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1958772512}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: StopHelpLoop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 514410319}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: StopHelpLoop
+      - m_Target: {fileID: 695370604}
+        m_TargetAssemblyTypeName: PatientActivator, Assembly-CSharp
+        m_MethodName: StopLoop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6291,6 +6243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 695370603}
+  - component: {fileID: 695370604}
   m_Layer: 0
   m_Name: Patients
   m_TagString: Untagged
@@ -6318,6 +6271,25 @@ Transform:
   - {fileID: 514410318}
   m_Father: {fileID: 1029943742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &695370604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695370602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915390d8ffb62ac4b968237eef8c812b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatientActivator
+  patients:
+  - {fileID: 2095426475}
+  - {fileID: 1619296741}
+  - {fileID: 1609415380}
+  - {fileID: 1958772512}
+  - {fileID: 514410319}
+  helpCooldown: 2
 --- !u!1 &750842949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,57 +6787,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2095426475}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1619296741}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1609415380}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1958772512}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 514410319}
-        m_TargetAssemblyTypeName: Patient, Assembly-CSharp
-        m_MethodName: Activate
+      - m_Target: {fileID: 695370604}
+        m_TargetAssemblyTypeName: PatientActivator, Assembly-CSharp
+        m_MethodName: StartLoop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
