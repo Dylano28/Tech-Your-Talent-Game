@@ -8,6 +8,8 @@ using Input = UnityEngine.Input;
 public class PlatformerController : MonoBehaviour
 {
     private Vector3 _velocity;
+    public Vector3 Velocity => _velocity;
+
     private int _lastXInput;
     public bool lockMovement;
 
@@ -40,9 +42,12 @@ public class PlatformerController : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.04f;
 
     private bool _hasLanded; // For landing event
-    [SerializeField] private UnityEvent onJump;
-    [SerializeField] private UnityEvent onLand;
-    [SerializeField] private UnityEvent onStartMove;
+    [SerializeField] public UnityEvent onJump;
+    [SerializeField] public UnityEvent onLand;
+    [SerializeField] public UnityEvent onStartMove;
+    [SerializeField] public UnityEvent onStopMove;
+    [SerializeField][HideInInspector] public UnityEvent onMoving;
+    [SerializeField][HideInInspector] public UnityEvent onGrounded;
 
     Rigidbody2D _rb;
     Collider2D _coll;
@@ -82,11 +87,14 @@ public class PlatformerController : MonoBehaviour
         var wallBlocked = _isOnWall == true && input == _lastXInput;
         if (input == 0 || wallBlocked)
         {
+            onStopMove.Invoke();
+
             _velocity.x = 0f;
             _currentXSpeed = 0f;
             return;
         }
 
+        onMoving.Invoke();
         if (_currentXSpeed == 0f && _isGrounded) onStartMove.Invoke(); 
 
         var newAirSpeedMod = 1f;
@@ -129,6 +137,8 @@ public class PlatformerController : MonoBehaviour
         if (_isJumping) return;
         if (_isGrounded)
         {
+            onGrounded.Invoke();
+
             _velocity.y = 0f;
             _currentCoyoteTime = coyoteTime;
             return;
