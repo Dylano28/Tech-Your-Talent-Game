@@ -6,6 +6,10 @@ public class InteractorController : MonoBehaviour
 {
     [SerializeField] private UnityEvent onInRange;
     [SerializeField] private UnityEvent leaveRange;
+
+    [SerializeField] private PlatformerController adjacentController;
+    public PlatformerController AdjacentController => adjacentController;
+
     [SerializeField] private ItemInventory adjacentInventory;
     public ItemInventory AdjacentInventory => adjacentInventory;
 
