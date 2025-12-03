@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrarySourceAsset
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: character_yellow_idle_0
+      m_Hash: 818775668
+      m_Sprite: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: Walk
+    m_Hash: 765711723
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Comp2_00000_0
+      m_Hash: 918514040
+      m_Sprite: {fileID: 7583162025045058998, guid: f8973b7885c610a4ab333c850418d036, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7583162025045058998, guid: f8973b7885c610a4ab333c850418d036, type: 3}
+    - m_Name: Comp2_00002_0
+      m_Hash: 893107478
+      m_Sprite: {fileID: -2310506356129221111, guid: 6483354fa1be5e34680130895904fd88, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2310506356129221111, guid: 6483354fa1be5e34680130895904fd88, type: 3}
+    - m_Name: Comp2_00004_0
+      m_Hash: 834060708
+      m_Sprite: {fileID: -2288426949569384356, guid: 9eaeab6e6d50fc645a134a8e5bb6de56, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2288426949569384356, guid: 9eaeab6e6d50fc645a134a8e5bb6de56, type: 3}
+    - m_Name: Comp2_00008_0
+      m_Hash: 950810816
+      m_Sprite: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
+    - m_Name: Comp2_00010_0
+      m_Hash: 235081245
+      m_Sprite: {fileID: 2703079111746655457, guid: e9553aae2a3db734fb683e62c9221b95, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2703079111746655457, guid: e9553aae2a3db734fb683e62c9221b95, type: 3}
+    - m_Name: Comp2_00012_0
+      m_Hash: 227007091
+      m_Sprite: {fileID: -5788264188299820673, guid: ba5d435a0dafb6b40bc4dc6218c18704, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5788264188299820673, guid: ba5d435a0dafb6b40bc4dc6218c18704, type: 3}
+    - m_Name: Comp2_00014_0
+      m_Hash: 151692993
+      m_Sprite: {fileID: -7602046356250741690, guid: f6f2ef49eef3c434e9d9eefd9cdcc1ed, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7602046356250741690, guid: f6f2ef49eef3c434e9d9eefd9cdcc1ed, type: 3}
+    - m_Name: Comp2_00018_0
+      m_Hash: 1073061
+      m_Sprite: {fileID: -4211337015856368066, guid: 04d27f1e5ed511b429ce5b6269c39a7e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4211337015856368066, guid: 04d27f1e5ed511b429ce5b6269c39a7e, type: 3}
+    - m_Name: Comp2_00020_0
+      m_Hash: 481731059
+      m_Sprite: {fileID: 8494727942587802255, guid: 6923edee28e623648a0175a828c3c0d9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8494727942587802255, guid: 6923edee28e623648a0175a828c3c0d9, type: 3}
+    - m_Name: Comp2_00022_0
+      m_Hash: 523400605
+      m_Sprite: {fileID: 2322824665986394455, guid: 5fdd72433b9901646b44903e0b850eb5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2322824665986394455, guid: 5fdd72433b9901646b44903e0b850eb5, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: Jump
+    m_Hash: 125937960
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Comp2_00000_0
+      m_Hash: 918514040
+      m_Sprite: {fileID: 7583162025045058998, guid: f8973b7885c610a4ab333c850418d036, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7583162025045058998, guid: f8973b7885c610a4ab333c850418d036, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: Fall
+    m_Hash: 459436082
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: character_yellow_duck_0
+      m_Hash: 53352132
+      m_Sprite: {fileID: 8494727942587802255, guid: 6923edee28e623648a0175a828c3c0d9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8494727942587802255, guid: 6923edee28e623648a0175a828c3c0d9, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 639003636976201764
+  m_Version: 1

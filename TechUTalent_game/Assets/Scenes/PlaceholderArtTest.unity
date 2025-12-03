@@ -5063,7 +5063,7 @@ Transform:
   m_GameObject: {fileID: 134905858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.19999999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.705, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5117,11 +5117,11 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.25
+  m_Time: 0.12
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -5148,8 +5148,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.9254902, a: 1}
-      key1: {r: 0, g: 1, b: 0.9254902, a: 1}
+      key0: {r: 0.21176472, g: 0.21176472, b: 0.21176472, a: 1}
+      key1: {r: 0.21176472, g: 0.21176472, b: 0.21176472, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -32995,9 +32995,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.125
     y: 0
-    width: 1
+    width: 0.74970704
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -33279,6 +33279,7 @@ GameObject:
   - component: {fileID: 726361152}
   - component: {fileID: 726361151}
   - component: {fileID: 726361154}
+  - component: {fileID: 726361155}
   m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
@@ -33295,7 +33296,7 @@ Transform:
   m_GameObject: {fileID: 726361149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33348,7 +33349,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9693fe8a0af21ef48abbe60710d4f924, type: 3}
+  m_Sprite: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33388,7 +33389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 8dc36530ed7b6764c8e1cc03bf22453b, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 35c441dc1a9ffed4d8460068f2017665, type: 3}
 --- !u!95 &726361154
 Animator:
   serializedVersion: 7
@@ -33399,7 +33400,7 @@ Animator:
   m_GameObject: {fileID: 726361149}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef09ddb219dc89c4a96c77d5436130a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -33411,6 +33412,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &726361155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726361149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8054f8370f3bfa8429d1fdfe5b43374b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
+  animator: {fileID: 726361154}
+  controller: {fileID: 1974325586}
+  spriteTransform: {fileID: 726361150}
 --- !u!1001 &764559627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34288,6 +34304,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onStopMove:
+    m_PersistentCalls:
+      m_Calls: []
+  onMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrounded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!70 &1974325587
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -34323,7 +34348,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 0.5, y: 1.5}
   m_Direction: 0
 --- !u!1001 &2019178576
 PrefabInstance:
