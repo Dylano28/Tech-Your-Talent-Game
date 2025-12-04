@@ -2,16 +2,12 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectableHolder : MonoBehaviour
+public class CollectableHolder : Singleton<CollectableHolder>
 {
-    public static CollectableHolder Instance;
     public List<string> collectableIds {  get; private set; }
 
     private void Start()
     {
-        if (Instance != null) Destroy(gameObject);
-        Instance = this;
-
         if (collectableIds == null) collectableIds = new List<string>();
     }
 
@@ -35,11 +31,5 @@ public class CollectableHolder : MonoBehaviour
     public bool HasId(string id)
     {
         return collectableIds.Contains(id);
-    }
-
-
-    private void OnDestroy()
-    {
-        Instance = null;
     }
 }

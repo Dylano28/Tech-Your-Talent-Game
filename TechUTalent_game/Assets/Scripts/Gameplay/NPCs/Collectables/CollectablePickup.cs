@@ -6,6 +6,6 @@ public class CollectablePickup : Pickup
 
     protected override void PickUp(InteractorController interactor)
     {
-        CollectableHolder.Instance.AddCollectable(collectable);
+        CollectableHolder.instance.AddCollectable(collectable);
     }
 }
