@@ -53,4 +53,4 @@ MonoBehaviour:
   onFail:
     m_PersistentCalls:
       m_Calls: []
-  waitTime: 4
+  waitTime: 2
