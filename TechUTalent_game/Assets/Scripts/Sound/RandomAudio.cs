@@ -29,13 +29,13 @@ public class RandomAudio : MonoBehaviour
     {
         var play_clip = clips[Random.Range(0, clips.Length)];
         _audio.clip = play_clip;
-
+       
         var pitch = maxPitch != 1f ? Random.Range(1, maxPitch) : _audio.pitch; // Pick random number of pitch
         var volume = minVolume != 1f ? Random.Range(minVolume, 1) : _audio.volume; // Pick random number of volume
 
         _audio.pitch = pitch;
         _audio.volume = volume;
-
+        
         _audio.Play();
     }
 }
