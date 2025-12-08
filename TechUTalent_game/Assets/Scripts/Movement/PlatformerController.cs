@@ -72,20 +72,19 @@ public class PlatformerController : MonoBehaviour
     // Frame based operations
     private void FixedUpdate()
     {
-        HorizontalMovement();
-        VerticalMovement();
+        HorizontalMovement(lockMovement);
+        VerticalMovement(lockMovement);
         ApplyGravity();
 
-        if (lockMovement) return;
         _rb.MovePosition(transform.position + _velocity * Time.deltaTime);
     }
 
 
-    private void HorizontalMovement()
+    private void HorizontalMovement(bool locked = false)
     {
         var input = Input.GetAxisRaw("Horizontal");
         var wallBlocked = _isOnWall == true && input == _lastXInput;
-        if (input == 0 || wallBlocked)
+        if (input == 0 || wallBlocked || locked)
         {
             onStopMove.Invoke();
 
@@ -105,11 +104,11 @@ public class PlatformerController : MonoBehaviour
         _velocity.x = input * (_currentXSpeed * newAirSpeedMod);
     }
 
-    private void VerticalMovement()
+    private void VerticalMovement(bool locked = false)
     {
         if (Input.GetButton("Jump") == false) _hasJumped = false; // Reset jump
 
-        if (_hasJumped || _currentCoyoteTime <= 0) return;
+        if (_hasJumped || _currentCoyoteTime <= 0 || locked) return;
         if (Input.GetButton("Jump"))
         {
             if (_isJumping == false) onJump.Invoke();
