@@ -832,7 +832,7 @@ MonoBehaviour:
   gravity: 1.6
   gravityMax: 32
   gravityOnJump: 1
-  jumpSpeed: 2048
+  jumpSpeed: 32
   jumpPower: 21
   InitialJumpPower: 8
   coyoteTime: 0.04
