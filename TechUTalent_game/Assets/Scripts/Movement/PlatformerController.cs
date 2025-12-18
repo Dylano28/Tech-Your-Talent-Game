@@ -194,11 +194,12 @@ public class PlatformerController : MonoBehaviour
         RaycastHit2D[] results = new RaycastHit2D[10];
         var rayLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
         int moveHit = 0;
+        var y = transform.position.y + _coll.offset.y;
         for (int rays = 0; rays < WALL_RAY_AMOUNT; rays++)
         {
             var halfHeight = _coll.bounds.size.y / 2;
-            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays));
-            var hit = Physics2D.Raycast(transform.position, new Vector3(_lastXInput, 0), _collisionFilter, results, rayLength);
+            var pos = new Vector3(transform.position.x, y - halfHeight + (halfHeight * rays));
+            var hit = Physics2D.Raycast(pos, new Vector3(_lastXInput, 0), _collisionFilter, results, rayLength);
             if (hit > 0)
             {
                 moveHit = hit;
@@ -235,10 +236,11 @@ public class PlatformerController : MonoBehaviour
 
         Gizmos.color = Color.red;
         var wallLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
+        var y = transform.position.y + _coll.offset.y;
         for (int rays = 0; rays < WALL_RAY_AMOUNT; rays++)
         {
             var halfHeight = _coll.bounds.size.y / 2;
-            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays));
+            var pos = new Vector3(transform.position.x, y - halfHeight + (halfHeight * rays));
             Gizmos.DrawLine(pos, pos + (new Vector3(Mathf.Floor(_lastXInput), 0) * wallLength));
         }
 
