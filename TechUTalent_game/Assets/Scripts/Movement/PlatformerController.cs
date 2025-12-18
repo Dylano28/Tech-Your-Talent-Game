@@ -36,7 +36,7 @@ public class PlatformerController : MonoBehaviour
     private float _currentCoyoteTime;
     private float _currentJumpPower;
     [SerializeField] private bool gravityOnJump = true;
-    [SerializeField] private float jumpSpeed = 2048f;
+    [SerializeField] private float jumpSpeed = 32f;
     [SerializeField] private float jumpPower = 18f;
     [SerializeField] private float InitialJumpPower = 6f;
     [SerializeField] private float coyoteTime = 0.04f;
@@ -114,7 +114,7 @@ public class PlatformerController : MonoBehaviour
             if (_isJumping == false) onJump.Invoke();
             _isJumping = true;
 
-            var newJump = _currentJumpPower + (1 / (jumpPower - _currentJumpPower) * jumpSpeed * Time.deltaTime);
+            var newJump = _currentJumpPower + (1 / (jumpPower - _currentJumpPower) * jumpSpeed);
             _currentJumpPower = Mathf.Clamp(newJump, InitialJumpPower, jumpPower);
             _velocity.y = _currentJumpPower;
         }
@@ -148,7 +148,7 @@ public class PlatformerController : MonoBehaviour
         {
             newVelocity = -gravityMax;
             _hasLanded = false;
-        }  
+        }
         _velocity.y = newVelocity;
         _currentCoyoteTime = Mathf.Clamp(_currentCoyoteTime - Time.deltaTime, 0, coyoteTime);
     }
