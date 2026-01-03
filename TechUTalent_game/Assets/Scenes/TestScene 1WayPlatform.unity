@@ -5129,7 +5129,7 @@ GameObject:
   - component: {fileID: 310139888}
   - component: {fileID: 310139887}
   - component: {fileID: 310139886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -7193,10 +7193,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.12343251
+    x: 0.123462856
     y: 0
-    width: 0.7530866
-    height: 0.9997825
+    width: 0.7532718
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7549,7 +7549,7 @@ GameObject:
   - component: {fileID: 1875646501}
   m_Layer: 7
   m_Name: OneWayPlatform
-  m_TagString: Obstacle
+  m_TagString: OneWay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7787,9 +7787,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedPlatformerController
   lockMovement: 0
-  obstacleTag: Obstacle
-  obstacleLayer: Default
-  oneWayPlatform: OneWayPlatform
+  groundLayer: Ground
+  oneWayPlatformLayer: OneWayPlatform
   xSpeed: 10
   xAccel: 1.25
   airSpeedMod: 1
@@ -7821,6 +7820,7 @@ MonoBehaviour:
   onStartMove:
     m_PersistentCalls:
       m_Calls: []
+  dropThroughTime: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

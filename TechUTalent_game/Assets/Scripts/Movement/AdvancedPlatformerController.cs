@@ -10,18 +10,18 @@ public class AdvancedPlatformerController : MonoBehaviour
     private Vector3 _velocity;
     private int _lastXInput;
     public bool lockMovement;
-
-    private bool _isColliding;
+    
     private bool _isGrounded;
     private bool _isOnWall;
     private Vector3 GROUND_RAY_MARGIN = Vector3.right * 0.1f;
     private const float GROUND_RAY_DIVISION = 1.95f;
     private const float WALL_RAY_DIVISION = 1.8f;
     private const int WALL_RAY_AMOUNT = 3;
-    [SerializeField] private string obstacleTag = "Obstacle";
-    [SerializeField] private string obstacleLayer = "Default";
+    
+    [SerializeField] private string groundLayer = "Ground";
+    [SerializeField] private string oneWayPlatformLayer = "OneWayPlatform";
 
-    [SerializeField] private string oneWayPlatform = "OneWayPlatform";
+    private ContactFilter2D _groundFilter;
     private ContactFilter2D _oneWayFilter;
 
     private float _currentXSpeed = 0f;
@@ -50,6 +50,14 @@ public class AdvancedPlatformerController : MonoBehaviour
     Rigidbody2D _rb;
     Collider2D _coll;
     ContactFilter2D _collisionFilter;
+    
+    private int _playerLayer;
+    private int _oneWayLayer;
+    
+    [SerializeField] private float dropThroughTime = 0.25f;
+
+    private bool _dropThrough;
+    private float _dropThroughTimer;
 
     private void Start()
     {
@@ -62,11 +70,14 @@ public class AdvancedPlatformerController : MonoBehaviour
 
         _coll = GetComponent<Collider2D>();
 
-        _collisionFilter = new ContactFilter2D();
-        _collisionFilter.SetLayerMask(LayerMask.GetMask(obstacleLayer));
+        _groundFilter = new ContactFilter2D();
+        _groundFilter.SetLayerMask(LayerMask.GetMask(groundLayer));
 
         _oneWayFilter = new ContactFilter2D();
-        _oneWayFilter.SetLayerMask(LayerMask.GetMask(oneWayPlatform));
+        _oneWayFilter.SetLayerMask(LayerMask.GetMask(oneWayPlatformLayer));
+        
+        _playerLayer = LayerMask.NameToLayer("Player");
+        _oneWayLayer = LayerMask.NameToLayer(oneWayPlatformLayer);
     }
 
 
@@ -76,6 +87,15 @@ public class AdvancedPlatformerController : MonoBehaviour
         HorizontalMovement();
         VerticalMovement();
         ApplyGravity();
+        
+        HandleOneWayCollision();
+        
+        if (_dropThrough)
+        {
+            _dropThroughTimer -= Time.deltaTime;
+            if (_dropThroughTimer <= 0f)
+                _dropThrough = false;
+        }
 
         if (lockMovement) return;
         _rb.MovePosition(transform.position + _velocity * Time.deltaTime);
@@ -161,69 +181,87 @@ public class AdvancedPlatformerController : MonoBehaviour
         _isGrounded = newGrounded;
         _isOnWall = DetectWalls();
         if (_isGrounded == true) _hasLanded = true;
+        
+        if (_isGrounded && !_isJumping && Input.GetAxisRaw("Vertical") < 0)
+        {
+            _dropThrough = true;
+            _dropThroughTimer = dropThroughTime;
+
+            // Force separation
+            _velocity.y = -1f;
+        }
     }
 
+    
     private bool DetectGround()
     {
-        if (_isColliding == false) return false;
+        if (_dropThrough)
+            return false;
+        RaycastHit2D[] results = new RaycastHit2D[10];
+        float rayLength = _coll.bounds.size.y / GROUND_RAY_DIVISION;
 
-        var results = new RaycastHit2D[10];
-        var rayLength = _coll.bounds.size.y / GROUND_RAY_DIVISION;
-        
-        //checkt voor normale platform eerst
-        var hit = Physics2D.Raycast(transform.position, Vector2.down, _collisionFilter, results, rayLength);
-        if (hit > 0) return true;
-        
-        //checkt One-Way platform
-        //checkt alleen One-Way platforms als je naar beneden gaat
+        Vector3 origin = transform.position;
+        Vector3 halfWidth = Vector3.right * (_coll.bounds.size.x / 2f - 0.05f);
+
+        // ---- SOLID GROUND ----
+        if (Physics2D.Raycast(origin, Vector2.down, _groundFilter, results, rayLength) > 0)
+            return true;
+
+        if (Physics2D.Raycast(origin + halfWidth, Vector2.down, _groundFilter, results, rayLength) > 0)
+            return true;
+
+        if (Physics2D.Raycast(origin - halfWidth, Vector2.down, _groundFilter, results, rayLength) > 0)
+            return true;
+
+        // ---- ONE-WAY PLATFORM (only when falling) ----
         if (_velocity.y <= 0f)
         {
-            var oneWayHit = Physics2D.Raycast(transform.position, Vector2.down, _oneWayFilter, results, rayLength);
-            if (oneWayHit > 0)
+            if (Physics2D.Raycast(origin, Vector2.down, _oneWayFilter, results, rayLength) > 0)
             {
-                var platformY = results[0].point.y;
-                var playerFeetY = transform.position.y - (_coll.bounds.size.y / 2f);
+                float platformY = results[0].point.y;
+                float feetY = transform.position.y - (_coll.bounds.size.y / 2f);
 
-                if (playerFeetY >= platformY - 0.01f)
+                if (feetY >= platformY - 0.01f)
                     return true;
             }
         }
+
         return false;
     }
 
     private bool DetectWalls()
     {
-        if (_isColliding == false) return false;
-
         RaycastHit2D[] results = new RaycastHit2D[10];
-        var rayLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
-        int moveHit = 0;
-        for (int rays = 0; rays < WALL_RAY_AMOUNT; rays++)
+        float rayLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
+
+        float halfHeight = _coll.bounds.size.y / 2f;
+        Vector2 dir = new Vector2(Mathf.Sign(_lastXInput), 0f);
+
+        if (dir.x == 0f)
+            return false;
+
+        // Cast 3 rays vertically along the body
+        for (int i = 0; i < WALL_RAY_AMOUNT; i++)
         {
-            var halfHeight = _coll.bounds.size.y / 2;
-            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays));
-            var hit = Physics2D.Raycast(transform.position, new Vector3(_lastXInput, 0), _collisionFilter, results, rayLength);
-            if (hit > 0)
-            {
-                moveHit = hit;
-                break;
-            }
+            float heightStep = (halfHeight * 2f) / (WALL_RAY_AMOUNT - 1);
+            float yOffset = -halfHeight + (heightStep * i);
+
+            Vector2 origin = new Vector2(transform.position.x, transform.position.y + yOffset);
+
+            if (Physics2D.Raycast(origin, dir, _groundFilter, results, rayLength) > 0)
+                return true;
         }
-        return moveHit > 0;
-    }
 
-    private void OnCollisionStay2D(Collision2D collision)
+        return false;
+    }
+    
+    private void HandleOneWayCollision()
     {
-        _isColliding = collision.gameObject.CompareTag(obstacleTag);
+        bool ignore = _velocity.y > 0f || _dropThrough;
+        Physics2D.IgnoreLayerCollision(_playerLayer, _oneWayLayer, ignore);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        _isColliding = !(obstacleTag == "" || collision.gameObject.tag == obstacleTag);
-    }
-
-
-
+    
     // Debugging
     private void OnDrawGizmos()
     {
