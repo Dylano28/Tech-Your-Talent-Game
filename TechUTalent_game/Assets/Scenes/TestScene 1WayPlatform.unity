@@ -7193,10 +7193,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.123462856
+    x: 0.12343251
     y: 0
-    width: 0.7532718
-    height: 1
+    width: 0.7530866
+    height: 0.9997825
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7787,8 +7787,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedPlatformerController
   lockMovement: 0
-  groundLayer: Ground
-  oneWayPlatformLayer: OneWayPlatform
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  oneWayLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  platformEffectLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   xSpeed: 10
   xAccel: 1.25
   airSpeedMod: 1
@@ -7797,7 +7804,7 @@ MonoBehaviour:
   gravityOnJump: 1
   jumpSpeed: 2048
   jumpPower: 20
-  InitialJumpPower: 8
+  initialJumpPower: 6
   coyoteTime: 0.04
   onJump:
     m_PersistentCalls:
@@ -7820,6 +7827,7 @@ MonoBehaviour:
   onStartMove:
     m_PersistentCalls:
       m_Calls: []
+  playerLayerName: Player
   dropThroughTime: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
