@@ -27,6 +27,8 @@ public class InteractorController : MonoBehaviour
 
         isInRange = true;
         currentInteractable = collision.GetComponent<Interactable>();
+        if (currentInteractable.AutoInteract) return;
+
         onInRange.Invoke();
     }
 
@@ -35,6 +37,8 @@ public class InteractorController : MonoBehaviour
         if (collision.GetComponent<Interactable>() != currentInteractable) return;
 
         isInRange = false;
+        if (currentInteractable.AutoInteract) return;
+
         leaveRange.Invoke();
     }
 
