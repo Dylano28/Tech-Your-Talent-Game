@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   interactOnce: 1
   destroyOnInteract: 0
-  autoInteract: 1
+  autoInteract: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []

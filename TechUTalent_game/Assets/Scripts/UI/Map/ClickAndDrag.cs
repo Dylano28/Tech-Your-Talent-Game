@@ -3,6 +3,7 @@ using UnityEngine;
 public class ClickAndDrag : MonoBehaviour
 {
     private Vector3 _origin;
+    [SerializeField] private float zPos = -5;
 
 
     private void Update()
@@ -17,6 +18,7 @@ public class ClickAndDrag : MonoBehaviour
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var  pos = mousePos - _origin;
-        transform.position = (Vector2)pos;
+        var finalPos = new Vector3(pos.x, pos.y, zPos);
+        transform.position = finalPos;
     }
 }
