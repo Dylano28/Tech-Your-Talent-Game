@@ -286,9 +286,9 @@ GameObject:
   m_Component:
   - component: {fileID: 63084889}
   - component: {fileID: 63084890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,9 +620,9 @@ GameObject:
   - component: {fileID: 310139888}
   - component: {fileID: 310139887}
   - component: {fileID: 310139886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
