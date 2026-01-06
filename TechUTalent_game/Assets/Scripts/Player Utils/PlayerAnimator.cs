@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private PlatformerController controller;
+    [SerializeField] private AdvancedPlatformerController controller;
     [SerializeField] private Transform spriteTransform;
 
     private const string GROUND_TRIGGER = "grounded";

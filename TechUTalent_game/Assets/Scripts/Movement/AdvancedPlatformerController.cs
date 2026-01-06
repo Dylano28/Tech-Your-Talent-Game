@@ -9,6 +9,7 @@ using Input = UnityEngine.Input;
 public class AdvancedPlatformerController : MonoBehaviour
 {
     private Vector3 _velocity;
+    public Vector3 Velocity => _velocity;
     private int _lastXInput;
     public bool lockMovement;
     
@@ -55,14 +56,17 @@ public class AdvancedPlatformerController : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.04f;
     
     private bool _hasLanded;
-    [SerializeField] private UnityEvent onJump;
-    [SerializeField] private UnityEvent onLand;
-    [SerializeField] private UnityEvent onStartMove;
+    [SerializeField] public UnityEvent onJump;
+    [SerializeField] public UnityEvent onLand;
+    [SerializeField] public UnityEvent onStartMove;
+    [SerializeField] public UnityEvent onStopMove;
+    [SerializeField][HideInInspector] public UnityEvent onMoving;
+    [SerializeField][HideInInspector] public UnityEvent onGrounded;
     
     private Rigidbody2D _rb;
     private Collider2D _coll;
     
-    [Header("Runtime Layers")] [Tooltip("Name of the Player layer (must exist)")] [SerializeField]
+    [Header("Runtime Layers")] [Tooltip("Name of the Player layer")] [SerializeField]
     private string playerLayerName = "Player";
 
     private int _playerLayerIndex;
@@ -125,11 +129,13 @@ public class AdvancedPlatformerController : MonoBehaviour
         var wallBlocked = _isOnWall && input == _lastXInput;
         if (input == 0 || wallBlocked)
         {
+            onStopMove.Invoke();
             _velocity.x = 0f;
             _currentXSpeed = 0f;
             return;
         }
 
+        onMoving.Invoke();
         if (_currentXSpeed == 0f && _isGrounded) onStartMove.Invoke();
 
         var newAirSpeedMod = _isGrounded ? 1f : airSpeedMod;
@@ -169,6 +175,8 @@ public class AdvancedPlatformerController : MonoBehaviour
 
         if (_isGrounded)
         {
+            onGrounded.Invoke();
+            
             _velocity.y = 0f;
             _currentCoyoteTime = coyoteTime;
             return;
