@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
   animator: {fileID: 2294712722633682431}
-  controller: {fileID: 7914404928844286220}
+  controller: {fileID: 5887145763954270658}
   spriteTransform: {fileID: 4027334987115168447}
 --- !u!1 &2059068655157934015
 GameObject:
@@ -576,7 +576,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  adjacentController: {fileID: 7914404928844286220}
+  adjacentController: {fileID: 5887145763954270658}
   adjacentInventory: {fileID: 5790731461324515769}
 --- !u!1 &3885854948053806051
 GameObject:
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 7204557349429764545}
   - component: {fileID: 4008491875760262395}
   - component: {fileID: 4407520359947696359}
-  - component: {fileID: 7914404928844286220}
+  - component: {fileID: 5887145763954270658}
   - component: {fileID: 5790731461324515769}
   m_Layer: 3
   m_Name: Player
@@ -684,7 +684,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7914404928844286220
+--- !u!114 &5887145763954270658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -693,21 +693,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 3885854948053806051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 053eb50d0501d4d41a537808b4f2f093, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d982a2d733bf5f48b758a92d4db9782, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlatformerController
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedPlatformerController
   lockMovement: 0
-  obstacleTag: Obstacle
-  obstacleLayer: Default
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  oneWayLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  platformEffectLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   xSpeed: 10
   xAccel: 1.25
   airSpeedMod: 1
   gravity: 1.6
   gravityMax: 32
   gravityOnJump: 1
-  jumpSpeed: 32
+  jumpSpeed: 2048
   jumpPower: 21
-  InitialJumpPower: 8
+  initialJumpPower: 8
   coyoteTime: 0.04
   onJump:
     m_PersistentCalls:
@@ -731,7 +738,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -758,7 +765,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -785,7 +792,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -799,6 +806,8 @@ MonoBehaviour:
   onGrounded:
     m_PersistentCalls:
       m_Calls: []
+  playerLayerName: Player
+  dropThroughTime: 0.25
 --- !u!114 &5790731461324515769
 MonoBehaviour:
   m_ObjectHideFlags: 0
