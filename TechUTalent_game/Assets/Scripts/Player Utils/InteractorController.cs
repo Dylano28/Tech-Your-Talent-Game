@@ -27,19 +27,16 @@ public class InteractorController : MonoBehaviour
 
         isInRange = true;
         currentInteractable = collision.GetComponent<Interactable>();
-        if (currentInteractable.AutoInteract) return;
-
-        onInRange.Invoke();
+        if (currentInteractable.AutoInteract == false) onInRange.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (currentInteractable == false) return;
         if (collision.GetComponent<Interactable>() != currentInteractable) return;
 
         isInRange = false;
-        if (currentInteractable.AutoInteract) return;
-
-        leaveRange.Invoke();
+        if (currentInteractable.AutoInteract == false) leaveRange.Invoke();
     }
 
     private void Update()
