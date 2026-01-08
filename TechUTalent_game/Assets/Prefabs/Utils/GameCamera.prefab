@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698d1a211785de94f86f327d775596a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueDisplay
-  typeCooldown: 1
+  typeCooldown: 0.5
   panel: {fileID: 3231840591403114523}
   nameLabel: {fileID: 7495537927846116939}
   speechLabel: {fileID: 7540343812645995765}

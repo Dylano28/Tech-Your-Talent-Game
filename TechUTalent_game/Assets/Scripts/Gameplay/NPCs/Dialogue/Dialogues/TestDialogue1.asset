@@ -16,5 +16,13 @@ MonoBehaviour:
   dialogueSegments:
   - newPerson: 
     text: Hallo speler! ik ben een groene boon.
-    textSpeed: 0
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: Speler
+    text: Hoi groene boon! hoe gaat het?
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: Groene boon
+    text: Ik heb depressie
+    textSpeed: 0.1
     isSkipable: 1

@@ -44,7 +44,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
     {
         if (canSkip == false) return;
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             NextSegment();
         }
