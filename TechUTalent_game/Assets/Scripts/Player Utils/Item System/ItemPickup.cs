@@ -8,6 +8,7 @@ public class ItemPickup : Pickup
     {
         if (interactor.AdjacentInventory == null) return;
         var inventory = interactor.AdjacentInventory;
+        ObjectiveManager.Instance.Collect();
         inventory.AddItem(item);
     }
 }
