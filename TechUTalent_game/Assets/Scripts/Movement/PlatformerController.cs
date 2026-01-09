@@ -224,8 +224,6 @@ public class PlatformerController : MonoBehaviour
     // Debugging
     private void OnDrawGizmos()
     {
-        if (EditorApplication.isPlayingOrWillChangePlaymode == false) return;
-
         // Draw visual raycasts
         Gizmos.color = Color.green;
         var length = _coll.bounds.size.y / GROUND_RAY_DIVISION;
