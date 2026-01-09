@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
-  m_Name: TestDialogue1
+  m_Name: TestDialogue2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Persoon
+  speakerName: Groene boon
   dialogueSegments:
-  - newPerson: 
-    text: Hallo speler! ik ben een groene boon.
-    textSpeed: 0.1
-    isSkipable: 1
   - newPerson: Speler
-    text: Hoi groene boon! hoe gaat het?
+    text: Dat is jammer om te horen
     textSpeed: 0.1
     isSkipable: 1
-  - newPerson: Groene boon
-    text: Ik heb depressie
-    textSpeed: 0.1
-    isSkipable: 1
+  - newPerson: 
+    text: Ja :((((((((((((((((
+    textSpeed: 0.5
+    isSkipable: 0

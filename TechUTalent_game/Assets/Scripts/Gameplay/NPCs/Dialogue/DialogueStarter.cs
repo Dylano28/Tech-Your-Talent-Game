@@ -1,11 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueStarter : MonoBehaviour
 {
     [Tooltip("For creating repeated interactable speakers")][SerializeField] private Interactable dialogueInteractable;
-    [SerializeField] private DialogueContainer dialogueContainer;
+    [SerializeField] private List<DialogueContainer> dialogueContainer;
 
+    private int dialogueIndex = 0;
     const float TIMEOUT = 0.2f;
 
     private void Start()
@@ -23,7 +25,8 @@ public class DialogueStarter : MonoBehaviour
             DialoguePlayer.instance.onDialogueEnd.AddListener(() => StartCoroutine(DialogueInputTimeout(interactor)));
         }
 
-        DialoguePlayer.instance.PlayDialogue(dialogueContainer);
+        DialoguePlayer.instance.PlayDialogue(dialogueContainer[dialogueIndex]);
+        if (dialogueIndex + 1 < dialogueContainer.Count) dialogueIndex++;
     }
 
     private IEnumerator DialogueInputTimeout(InteractorController interactor)
