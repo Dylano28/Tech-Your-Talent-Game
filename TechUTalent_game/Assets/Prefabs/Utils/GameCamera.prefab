@@ -987,6 +987,7 @@ GameObject:
   - component: {fileID: 1787209724220732621}
   - component: {fileID: 95718433033817062}
   - component: {fileID: 8244050457097724664}
+  - component: {fileID: 9128370029537047436}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1027,8 +1028,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialoguePlayer
   keepInstance: 0
-  canSkip: 0
-  onNewDialogue:
+  typeCooldown: 0.5
+  onNewSegment:
+    m_PersistentCalls:
+      m_Calls: []
+  onTypeUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onSegmentDone:
     m_PersistentCalls:
       m_Calls: []
   onDialogueEnd:
@@ -1046,10 +1053,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698d1a211785de94f86f327d775596a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueDisplay
-  typeCooldown: 0.5
   panel: {fileID: 3231840591403114523}
   nameLabel: {fileID: 7495537927846116939}
   speechLabel: {fileID: 7540343812645995765}
+--- !u!114 &9128370029537047436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5234784534857133073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21761f7d42d233a4488608f1fe6ae6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInput
 --- !u!1 &6491698086180606435
 GameObject:
   m_ObjectHideFlags: 0

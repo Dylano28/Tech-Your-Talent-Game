@@ -26,3 +26,7 @@ MonoBehaviour:
     text: Ik heb depressie
     textSpeed: 0.1
     isSkipable: 1
+  - newPerson: Test text
+    text: DEZE TEXT IS UNSKIPPABLE
+    textSpeed: 0.4
+    isSkipable: 0

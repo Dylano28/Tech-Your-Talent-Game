@@ -54,6 +54,14 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Update()
     {
+        if (controller.lockMovement)
+        {
+            animator.ResetTrigger(WALK_TRIGGER);
+            animator.SetTrigger(STOP_TRIGGER);
+
+            return;
+        }
+
         if (controller.Velocity == _lastVelocity || controller.Velocity == Vector3.zero) return;
         SetDirection(controller.Velocity);
     }

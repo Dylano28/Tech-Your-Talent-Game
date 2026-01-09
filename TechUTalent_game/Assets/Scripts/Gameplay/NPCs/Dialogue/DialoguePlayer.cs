@@ -1,17 +1,27 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 
 public class DialoguePlayer : Singleton<DialoguePlayer>
 {
+    [SerializeField] private float typeCooldown = 0.5f;
+
+    public UnityEvent<string> onNewSegment;
+    public UnityEvent<string> onTypeUpdate;
+    public UnityEvent onSegmentDone;
+    public UnityEvent onDialogueEnd;
+
+    private bool _canSkip = true;
+    public bool CanSkip => _canSkip;
+
     private DialogueContainer _currentContainer;
     private int _currentSegment;
 
-    [HideInInspector] public bool canSkip;
-    [HideInInspector] public UnityEvent<string, string, float> onNewDialogue;
-    [HideInInspector] public UnityEvent onDialogueEnd;
-
+    private bool _isTyping;
+    private float _currentSpeedMod;
+    private string _currentText;
+    private string _remainingText;
+    private float _lastUpdate;
 
     public void PlayDialogue(DialogueContainer container)
     {
@@ -23,6 +33,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
 
     public void NextSegment()
     {
+        if (_canSkip == false) return;
         if (_currentSegment > _currentContainer.Segments.Count - 1)
         {
             StopDialogue();
@@ -31,22 +42,49 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
 
         var segmentData = _currentContainer.Segments[_currentSegment];
         var currentName = segmentData.newPerson == string.Empty ? _currentContainer.SpeakerName : segmentData.newPerson;
-        onNewDialogue.Invoke(currentName, segmentData.text, segmentData.textSpeed);
-        canSkip = segmentData.isSkipable;
 
+        _currentText = string.Empty;
+        _remainingText = segmentData.text;
+        _currentSpeedMod = segmentData.textSpeed;
+
+        // Start typing after setting typing text
+        _canSkip = segmentData.isSkipable;
+        _isTyping = true;
+
+        // Signal start
+        onNewSegment.Invoke(currentName);
+
+        // Set to next segment
         _currentSegment++;
     }
 
-    public void StopDialogue() => onDialogueEnd.Invoke();
-
-
-    private void Update()
+    public void StopDialogue()
     {
-        if (canSkip == false) return;
+        _isTyping = false;
+        onDialogueEnd.Invoke();
+    }
 
-        if (Input.GetButtonDown("Jump"))
+    private void FixedUpdate()
+    {
+        if (_isTyping == false) return;
+
+        if (Time.time - _lastUpdate < typeCooldown * _currentSpeedMod) return;
+        _lastUpdate = Time.time;
+
+        var length = _remainingText.Length;
+        if (length == 0)
         {
-            NextSegment();
+            _isTyping = false;
+            _canSkip = true;
+
+            onSegmentDone.Invoke();
+
+            return;
         }
+
+        _currentText += _remainingText.ToCharArray()[0];
+        _remainingText = _remainingText.Remove(0, 1);
+
+        onTypeUpdate.Invoke(_currentText);
     }
 }

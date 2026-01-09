@@ -363,7 +363,7 @@ MonoBehaviour:
       - m_Target: {fileID: 510302678}
         m_TargetAssemblyTypeName: DialogueStarter, Assembly-CSharp
         m_MethodName: StartDialogue
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f632e4b00f877ee40800a9777059cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueStarter
+  dialogueInteractable: {fileID: 510302674}
   dialogueContainer: {fileID: 11400000, guid: b2dfd11bee6c7d64fa23c36d77721c97, type: 2}
 --- !u!1001 &930193515
 PrefabInstance:
