@@ -102,9 +102,10 @@ public class AdvancedPlatformerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        HandleInputAndMovement();
         ApplyGravity();
-        
+
+        if (lockMovement) return;
+        HandleInputAndMovement();
         HandleOneWayCollision();
         
         if (_dropThrough)
@@ -113,8 +114,7 @@ public class AdvancedPlatformerController : MonoBehaviour
             if (_dropThroughTimer <= 0f) _dropThrough = false;
         }
 
-        if (!lockMovement)
-            _rb.MovePosition(transform.position + _velocity * Time.deltaTime);
+        _rb.MovePosition(transform.position + _velocity * Time.deltaTime);
     }
     
     private void HandleInputAndMovement()

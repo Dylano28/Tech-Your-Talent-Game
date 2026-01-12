@@ -4,7 +4,10 @@ using UnityEngine.Events;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] private bool startInactive;
     [SerializeField] private bool interactOnce;
+    public bool InteractOnce => interactOnce;
+
     [SerializeField] private bool destroyOnInteract;
     [SerializeField] private bool autoInteract;
     public bool AutoInteract => autoInteract;
@@ -12,10 +15,12 @@ public class Interactable : MonoBehaviour
     [SerializeField] public UnityEvent<InteractorController> onInteract;
 
     private bool interacted;
+    public bool Interacted => interacted;
 
     private void Start()
     {
         GetComponent<Collider2D>().isTrigger = true;
+        interacted = startInactive;
     }
 
     public void Interact(InteractorController interactor)

@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d36c59e4318294d92216a46584c1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  startInactive: 1
   interactOnce: 1
   destroyOnInteract: 0
   autoInteract: 0

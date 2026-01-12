@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class ItemInventory : MonoBehaviour
 {

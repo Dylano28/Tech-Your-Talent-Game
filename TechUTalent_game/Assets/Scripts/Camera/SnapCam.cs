@@ -7,7 +7,9 @@ public class SnapCam : MonoBehaviour
     private const string SNAP_INFO = "Adds a margin on the size of the collider. Make sure to change the collider size to your resolution for snapping!";
     [SerializeField][Tooltip(SNAP_INFO)] private Vector2 margin = new Vector2(0.2f, 0.2f);
     [SerializeField] private int snapMod = 2;
+
     [SerializeField] private GameObject target;
+    public GameObject Target => target;
 
     private const int ZPOS = -10;
 
