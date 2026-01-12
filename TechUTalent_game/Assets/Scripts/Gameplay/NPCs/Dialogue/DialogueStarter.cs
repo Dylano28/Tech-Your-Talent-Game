@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,40 +21,20 @@ public class DialogueStarter : MonoBehaviour
     {
         StopAllCoroutines();
 
-        var dialogue = dialogueParts[dialogueIndex];
+        var currentDialogue = dialogueParts[dialogueIndex];
+        var segment = currentDialogue.dialogue;
 
-        // Check if collectable
-        var usedItem = false;
-        var nextDialogue = 0;
- 
-        if (dialogue.type == DialogueSettings.nextType.collectable)
+        // Check collected item
+        if (currentDialogue.type == DialogueSettings.nextType.collectable)
         {
-            if (dialogue.skipTo > dialogueParts.Count)
+            if (CollectableHolder.instance.HasId(currentDialogue.collectable.ID) == false)
             {
-                Debug.LogWarning("dialogue SKipTo value on index " + dialogueIndex + " on speaker " + gameObject.name + " is above total amount of dialogue parts.");
-                dialogueIndex = 0;
+                segment = currentDialogue.notCollectedDialogue;
             }
-
-            dialogueIndex = dialogue.skipTo;
-        }
-            
-        for (int i = 0; i < dialogueParts.Count; i++)
-        {
-            var checkedDialogue = dialogueParts[i];
-            if (checkedDialogue.type == DialogueSettings.nextType.collectable)
+            else if (currentDialogue.hasBeenCashedIn == false)
             {
-                if (CollectableHolder.instance.HasId(checkedDialogue.collectable.ID) == false) continue;
-                if (checkedDialogue.hasBeenCashedIn) continue;
-
-                checkedDialogue.hasBeenCashedIn = true;
-                checkedDialogue.onCashIn.Invoke();
-
-                usedItem = true;
-                nextDialogue = checkedDialogue.nextCollectableDialogue;
-
-                dialogueIndex = i;
-
-                break;
+                currentDialogue.hasBeenCashedIn = true;
+                currentDialogue.onCashIn.Invoke();
             }
         }
 
@@ -64,17 +45,19 @@ public class DialogueStarter : MonoBehaviour
             DialoguePlayer.instance.onDialogueEnd.AddListener(() => StartCoroutine(DialogueInputTimeout(interactor)));
         }
 
-        var currentDialogue = dialogueParts[dialogueIndex];
-        DialoguePlayer.instance.PlayDialogue(currentDialogue.dialogue);
+        DialoguePlayer.instance.PlayDialogue(segment);
 
         // Set next dialogue
         switch (currentDialogue.type)
         {
             case DialogueSettings.nextType.none:
                 break;
+            case DialogueSettings.nextType.skip:
+                dialogueIndex = currentDialogue.skipTo - 1;
+                return;
             case DialogueSettings.nextType.reset:
                 dialogueIndex = 0;
-                break;
+                return;
             case DialogueSettings.nextType.repeat:
                 if (repeatTimes < currentDialogue.repeat - 1)
                 {
@@ -83,19 +66,12 @@ public class DialogueStarter : MonoBehaviour
                 }
                 break;
             case DialogueSettings.nextType.collectable:
-                if (usedItem && nextDialogue < dialogueParts.Count)
-                {
-                    dialogueIndex = nextDialogue;
-                    return;
-                }
-                break;
+                if (currentDialogue.hasBeenCashedIn) break;
+                return;
         }
 
-        if (dialogueIndex + 1 < dialogueParts.Count)
-        {
-            repeatTimes = 0;
-            dialogueIndex++;
-        }
+        repeatTimes = 0;
+        if (dialogueIndex + 1 < dialogueParts.Count) dialogueIndex++;
     }
 
     private IEnumerator DialogueInputTimeout(InteractorController interactor)
