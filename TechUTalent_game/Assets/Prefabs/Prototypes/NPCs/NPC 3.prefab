@@ -183,5 +183,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueStarter
   dialogueInteractable: {fileID: 3305148356017027433}
-  dialogueContainer:
-  - {fileID: 11400000, guid: d2d8319677f718b4bb99c727d8e13964, type: 2}
+  dialogueParts:
+  - dialogue: {fileID: 11400000, guid: d2d8319677f718b4bb99c727d8e13964, type: 2}
+    type: 0
+    repeat: 0
+    checkOnStart: 0
+    collectable: {fileID: 0}
+    nextCollectableDialogue: 0
+    onCashIn:
+      m_PersistentCalls:
+        m_Calls: []
+    hasBeenCashedIn: 0
