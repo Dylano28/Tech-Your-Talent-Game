@@ -23,9 +23,12 @@ public class DialogueSettings
     [Range(2, MAX_NUMBER)] public int repeat;
     [Range(0, MAX_NUMBER)] public int skipTo;
 
+    public UnityEvent onStart;
+
     [Header("Collectable Settings")]
     public DialogueContainer notCollectedDialogue;
     [Tooltip("Make sure to always put next message AFTER this segment")] public Collectable collectable;
+
     public UnityEvent onCashIn;
 
     [HideInInspector] public bool hasBeenCashedIn;

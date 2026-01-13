@@ -17,6 +17,8 @@ public class DialogueStarter : MonoBehaviour
         if (dialogueInteractable) DialoguePlayer.instance.onDialogueEnd.AddListener(() => dialogueInteractable.ResetInteractable());
     }
 
+
+
     public void StartDialogue(InteractorController interactor = null)
     {
         StopAllCoroutines();
@@ -46,6 +48,7 @@ public class DialogueStarter : MonoBehaviour
         }
 
         DialoguePlayer.instance.PlayDialogue(segment);
+        currentDialogue.onStart.Invoke();
 
         // Set next dialogue
         switch (currentDialogue.type)
@@ -81,6 +84,19 @@ public class DialogueStarter : MonoBehaviour
 
         yield break;
     }
+
+
+    public void SetToSegmnent(int newIndex)
+    {
+        if (newIndex < 0 || newIndex > dialogueParts.Count - 1)
+        {
+            Debug.LogWarning("Given index " + newIndex.ToString() + " inavlid! Please check " + gameObject.name + "'s list of dialogue.");
+            return;
+        }
+        dialogueIndex = newIndex;
+    }
+
+
 
     private void OnApplicationQuit() => StopAllCoroutines();
 
