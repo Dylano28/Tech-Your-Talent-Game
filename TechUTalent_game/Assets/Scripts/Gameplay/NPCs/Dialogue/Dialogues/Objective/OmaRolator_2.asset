@@ -19,12 +19,13 @@ MonoBehaviour:
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: Waren er maar meer mensen zoals jij. Mijn rolator had mijn paniek knop
-      in de tas zitten, dus ik kon geen signaal sturen naar de gezondheidszorg
+    text: 'Waren er maar meer mensen zoals jij. Mijn rolator had mijn paniek knop
+      in de tas zitten, '
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: 'Maar gelukkig was jij in de buurt! '
+    text: 'dus ik kon geen signaal sturen naar de gezondheidszorg. Maar gelukkig
+      was jij in de buurt! '
     textSpeed: 0
     isSkipable: 1
   - newPerson: 

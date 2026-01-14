@@ -41,11 +41,7 @@ public class MapMenu : MonoBehaviour
         if (_isActive == false && canSetActive == false) return;
 
         _isActive = !_isActive;
-        foreach (Transform t in rootParent.GetComponentsInChildren<Transform>(true))
-        {
-            if (t == gameObject.transform) continue;
-            t.gameObject.SetActive(_isActive);
-        }
+        Show(_isActive);
 
         if (_isActive == false) return;
         if (_drawMap) mapDrawer.DrawMap();
@@ -63,5 +59,21 @@ public class MapMenu : MonoBehaviour
     {
         mapDrawer.transform.localPosition = Vector3.zero;
         if (_drawPlayers == false) mapDrawer.DrawMap();
+    }
+
+    private void Show(bool showElements)
+    {
+        foreach (Transform t in rootParent.GetComponentsInChildren<Transform>(true))
+        {
+            if (t == gameObject.transform) continue;
+            t.gameObject.SetActive(showElements);
+        }
+    }
+
+
+    public void SetCanDisplay(bool value)
+    {
+        if (value == false) Show(false);
+        canSetActive = value;
     }
 }

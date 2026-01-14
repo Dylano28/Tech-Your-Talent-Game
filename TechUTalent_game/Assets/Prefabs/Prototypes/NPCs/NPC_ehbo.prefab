@@ -210,3 +210,16 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     hasBeenCashedIn: 0
+  - dialogue: {fileID: 11400000, guid: 3ef1118106974c74884ecdb2d1a8ad74, type: 2}
+    type: 0
+    repeat: 2
+    skipTo: 0
+    onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    notCollectedDialogue: {fileID: 0}
+    collectable: {fileID: 0}
+    onCashIn:
+      m_PersistentCalls:
+        m_Calls: []
+    hasBeenCashedIn: 0

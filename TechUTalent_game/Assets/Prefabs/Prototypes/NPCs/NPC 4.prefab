@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3305148356017027433}
   - component: {fileID: 5092999865783231072}
   m_Layer: 0
-  m_Name: NPC_rolator
+  m_Name: NPC 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,35 +184,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueStarter
   dialogueInteractable: {fileID: 3305148356017027433}
   dialogueParts:
-  - dialogue: {fileID: 11400000, guid: 39c0b8c9b0665a246a42651c94e3929a, type: 2}
+  - dialogue: {fileID: 11400000, guid: 53f2e7e9ef5100745a42ef38a09df82b, type: 2}
     type: 0
-    repeat: 2
-    skipTo: 0
-    onStart:
-      m_PersistentCalls:
-        m_Calls: []
-    notCollectedDialogue: {fileID: 0}
-    collectable: {fileID: 0}
-    onCashIn:
-      m_PersistentCalls:
-        m_Calls: []
-    hasBeenCashedIn: 0
-  - dialogue: {fileID: 11400000, guid: cdd9e34339137c54ca69cd95498aa406, type: 2}
-    type: 4
-    repeat: 2
-    skipTo: 0
-    onStart:
-      m_PersistentCalls:
-        m_Calls: []
-    notCollectedDialogue: {fileID: 11400000, guid: 614b27cd405128d4dba24510079c2c23, type: 2}
-    collectable: {fileID: 11400000, guid: 73e19c45ee7c47b46a58aeccce4235b4, type: 2}
-    onCashIn:
-      m_PersistentCalls:
-        m_Calls: []
-    hasBeenCashedIn: 0
-  - dialogue: {fileID: 11400000, guid: ed5259fada7337b46848524245617b30, type: 2}
-    type: 0
-    repeat: 2
+    repeat: 0
     skipTo: 0
     onStart:
       m_PersistentCalls:
