@@ -10,23 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
-  m_Name: Woman_who_forgot_keys
+  m_Name: DemoEnd
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Zoekende Vrouw
+  speakerName: Man in Pak
   dialogueSegments:
   - newPerson: 
-    text: Oh hemel, ik denk dat ik mijn sleutels verloren ben!
+    text: Dit is het einde van het spel momenteel!
     textSpeed: 0
-    isSkipable: 1
-  - newPerson: Jij
-    text: Kan ik u helpen?
-    textSpeed: 0
-    isSkipable: 1
-  - newPerson: 
-    text: ...
-    textSpeed: 1
-    isSkipable: 0
-  - newPerson: 
-    text: "Nee niet nodig! Ik denk dat ik ze heb laten liggen in het caf\xE9."
-    textSpeed: 0.1
     isSkipable: 1
