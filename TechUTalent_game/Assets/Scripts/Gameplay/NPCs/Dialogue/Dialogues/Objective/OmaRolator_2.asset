@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
-  m_Name: Woman_who_forgot_keys
+  m_Name: OmaRolator_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Zoekende Vrouw
+  speakerName: Oude Oma
   dialogueSegments:
   - newPerson: 
-    text: Oh hemel, ik denk dat ik mijn sleutels verloren ben!
-    textSpeed: 0
-    isSkipable: 1
-  - newPerson: Jij
-    text: Kan ik u helpen?
+    text: Ooooogh bedankt kind. Ik voel mij nu al beter!
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: ...
-    textSpeed: 1
-    isSkipable: 0
+    text: 'Waren er maar meer mensen zoals jij. Mijn rolator had mijn paniek knop
+      in de tas zitten, '
+    textSpeed: 0
+    isSkipable: 1
   - newPerson: 
-    text: "Nee niet nodig! Ik denk dat ik ze heb laten liggen in het caf\xE9."
-    textSpeed: 0.1
+    text: 'dus ik kon geen signaal sturen naar de gezondheidszorg. Maar gelukkig
+      was jij in de buurt! '
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: We hebben meer mensen nodig zoals jij in deze wereld oghooghogh
+    textSpeed: 0
     isSkipable: 1

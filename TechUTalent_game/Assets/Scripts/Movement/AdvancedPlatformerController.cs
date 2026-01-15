@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -221,9 +222,17 @@ public class AdvancedPlatformerController : MonoBehaviour
         if (RaycastDown(origin + halfWidth, _groundFilter, rayLength)) return true;
         if (RaycastDown(origin - halfWidth, _groundFilter, rayLength)) return true;
 
-        if (!(_velocity.y <= 0f) || _dropThrough) return false;
-        RaycastHit2D[] results = new RaycastHit2D[4];
-        if (Physics2D.Raycast(origin, Vector2.down, _oneWayFilter, results, rayLength) <= 0) return false;
+        var middle = RaycastDownResults(origin, _oneWayFilter, rayLength);
+        var right = RaycastDownResults(origin + halfWidth, _oneWayFilter, rayLength);
+        var left = RaycastDownResults(origin - halfWidth, _oneWayFilter, rayLength);
+
+        var results = new List<RaycastHit2D>();
+        results.AddRange(middle);
+        results.AddRange(right);
+        results.AddRange(left);
+
+        if (results.Count <= 0) return false;
+
         var platformY = results[0].point.y;
         var feetY = transform.position.y - (_coll.bounds.size.y / 2f);
         return feetY >= platformY - 0.01f;
@@ -234,7 +243,15 @@ public class AdvancedPlatformerController : MonoBehaviour
         var results = new RaycastHit2D[4];
         return Physics2D.Raycast(origin, Vector2.down, filter, results, length) > 0;
     }
-    
+
+    private List<RaycastHit2D> RaycastDownResults(Vector3 origin, ContactFilter2D filter, float length)
+    {
+        var results = new List<RaycastHit2D>();
+        Physics2D.Raycast(origin, Vector2.down, filter, results, length);
+
+        return results;
+    }
+
     private bool DetectWalls()
     {
         var rayLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
@@ -245,8 +262,10 @@ public class AdvancedPlatformerController : MonoBehaviour
 
         for (var i = 0; i < WALL_RAY_AMOUNT; i++)
         {
-            var heightStep = (halfHeight * 2f) / (WALL_RAY_AMOUNT - 1);
-            var yOffset = -halfHeight + (heightStep * i);
+            var feetHeight = i == 0 ? halfHeight / 4f : 0f;
+
+            var heightStep = halfHeight * 2f / (WALL_RAY_AMOUNT - 1);
+            var yOffset = -halfHeight + (heightStep * i) + feetHeight;
             var origin = new Vector2(transform.position.x, transform.position.y + yOffset);
 
             var results = new RaycastHit2D[4];
@@ -291,10 +310,11 @@ public class AdvancedPlatformerController : MonoBehaviour
 
         Gizmos.color = Color.red;
         var wallLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
+        var halfHeight = _coll.bounds.size.y / 2;
         for (var rays = 0; rays < WALL_RAY_AMOUNT; rays++)
         {
-            var halfHeight = _coll.bounds.size.y / 2;
-            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays));
+            var feetHeight = rays == 0 ? halfHeight / 4f : 0f;
+            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays) + feetHeight);
             Gizmos.DrawLine(pos, pos + (new Vector3(Mathf.Floor(_lastXInput), 0) * wallLength));
         }
     }
