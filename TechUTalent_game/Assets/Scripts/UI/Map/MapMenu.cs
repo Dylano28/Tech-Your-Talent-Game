@@ -16,6 +16,7 @@ public class MapMenu : MonoBehaviour
     private bool _isActive = true;
     private bool _drawMap = true;
     private bool _drawPlayers = true;
+    private bool _drawMarkers = true;
 
 
     private void Start()
@@ -34,6 +35,7 @@ public class MapMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Map")) DisplayMap();
         if (_isActive && _drawPlayers) mapDrawer.DrawPlayers();
+        if (_isActive && _drawMarkers) mapDrawer.DrawMarkers();
     }
 
     public void DisplayMap()
