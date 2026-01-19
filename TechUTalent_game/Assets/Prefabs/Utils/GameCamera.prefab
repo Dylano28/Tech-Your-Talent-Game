@@ -321,6 +321,7 @@ MonoBehaviour:
   roomTilemap: {fileID: 0}
   mapTile: {fileID: 8499479608389979997, guid: 900fc5876589838468bcd48cb22f7964, type: 3}
   playerTile: {fileID: 11400000, guid: 999d5c735c82a7540a04037c74e6528a, type: 2}
+  defaultMarkerTile: {fileID: 11400000, guid: e014580519634aa43b73f5dac31412f7, type: 2}
 --- !u!114 &78049234417523245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,9 +1473,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.15277778
+    width: 0.26927084
+    height: 0.35916805
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
