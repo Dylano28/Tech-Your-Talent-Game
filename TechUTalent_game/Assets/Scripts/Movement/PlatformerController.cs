@@ -1,11 +1,15 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using Input = UnityEngine.Input;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class PlatformerController : MonoBehaviour
 {
     private Vector3 _velocity;
+    public Vector3 Velocity => _velocity;
+
     private int _lastXInput;
     public bool lockMovement;
 
@@ -32,10 +36,18 @@ public class PlatformerController : MonoBehaviour
     private float _currentCoyoteTime;
     private float _currentJumpPower;
     [SerializeField] private bool gravityOnJump = true;
-    [SerializeField] private float jumpSpeed = 2048f;
+    [SerializeField] private float jumpSpeed = 32f;
     [SerializeField] private float jumpPower = 18f;
     [SerializeField] private float InitialJumpPower = 6f;
     [SerializeField] private float coyoteTime = 0.04f;
+
+    private bool _hasLanded; // For landing event
+    [SerializeField] public UnityEvent onJump;
+    [SerializeField] public UnityEvent onLand;
+    [SerializeField] public UnityEvent onStartMove;
+    [SerializeField] public UnityEvent onStopMove;
+    [SerializeField][HideInInspector] public UnityEvent onMoving;
+    [SerializeField][HideInInspector] public UnityEvent onGrounded;
 
     Rigidbody2D _rb;
     Collider2D _coll;
@@ -60,25 +72,29 @@ public class PlatformerController : MonoBehaviour
     // Frame based operations
     private void FixedUpdate()
     {
-        HorizontalMovement();
-        VerticalMovement();
+        HorizontalMovement(lockMovement);
+        VerticalMovement(lockMovement);
         ApplyGravity();
 
-        if (lockMovement) return;
         _rb.MovePosition(transform.position + _velocity * Time.deltaTime);
     }
 
 
-    private void HorizontalMovement()
+    private void HorizontalMovement(bool locked = false)
     {
         var input = Input.GetAxisRaw("Horizontal");
         var wallBlocked = _isOnWall == true && input == _lastXInput;
-        if (input == 0 || wallBlocked)
+        if (input == 0 || wallBlocked || locked)
         {
+            onStopMove.Invoke();
+
             _velocity.x = 0f;
             _currentXSpeed = 0f;
             return;
         }
+
+        onMoving.Invoke();
+        if (_currentXSpeed == 0f && _isGrounded) onStartMove.Invoke(); 
 
         var newAirSpeedMod = 1f;
         if (_isGrounded == false) newAirSpeedMod = airSpeedMod;
@@ -88,16 +104,17 @@ public class PlatformerController : MonoBehaviour
         _velocity.x = input * (_currentXSpeed * newAirSpeedMod);
     }
 
-    private void VerticalMovement()
+    private void VerticalMovement(bool locked = false)
     {
         if (Input.GetButton("Jump") == false) _hasJumped = false; // Reset jump
 
-        if (_hasJumped || _currentCoyoteTime <= 0) return;
+        if (_hasJumped || _currentCoyoteTime <= 0 || locked) return;
         if (Input.GetButton("Jump"))
         {
+            if (_isJumping == false) onJump.Invoke();
             _isJumping = true;
 
-            var newJump = _currentJumpPower + (1 / (jumpPower - _currentJumpPower) * jumpSpeed * Time.deltaTime);
+            var newJump = _currentJumpPower + (1 / (jumpPower - _currentJumpPower) * jumpSpeed);
             _currentJumpPower = Mathf.Clamp(newJump, InitialJumpPower, jumpPower);
             _velocity.y = _currentJumpPower;
         }
@@ -119,12 +136,20 @@ public class PlatformerController : MonoBehaviour
         if (_isJumping) return;
         if (_isGrounded)
         {
+            onGrounded.Invoke();
+
             _velocity.y = 0f;
             _currentCoyoteTime = coyoteTime;
             return;
         }
 
-        _velocity.y = _velocity.y < -gravityMax ? -gravityMax : _velocity.y - gravity;
+        var newVelocity = _velocity.y - gravity;
+        if (_velocity.y < -gravityMax)
+        {
+            newVelocity = -gravityMax;
+            _hasLanded = false;
+        }
+        _velocity.y = newVelocity;
         _currentCoyoteTime = Mathf.Clamp(_currentCoyoteTime - Time.deltaTime, 0, coyoteTime);
     }
 
@@ -133,8 +158,12 @@ public class PlatformerController : MonoBehaviour
     // Always updating
     private void Update()
     {
-        _isGrounded = DetectGround();
+        var newGrounded = DetectGround();
+        if (newGrounded && _hasLanded == false) onLand.Invoke();
+
+        _isGrounded = newGrounded;
         _isOnWall = DetectWalls();
+        if (_isGrounded == true) _hasLanded = true;
     }
 
     private bool DetectGround()
@@ -165,11 +194,12 @@ public class PlatformerController : MonoBehaviour
         RaycastHit2D[] results = new RaycastHit2D[10];
         var rayLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
         int moveHit = 0;
+        var y = transform.position.y + _coll.offset.y;
         for (int rays = 0; rays < WALL_RAY_AMOUNT; rays++)
         {
             var halfHeight = _coll.bounds.size.y / 2;
-            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays));
-            var hit = Physics2D.Raycast(transform.position, new Vector3(_lastXInput, 0), _collisionFilter, results, rayLength);
+            var pos = new Vector3(transform.position.x, y - halfHeight + (halfHeight * rays));
+            var hit = Physics2D.Raycast(pos, new Vector3(_lastXInput, 0), _collisionFilter, results, rayLength);
             if (hit > 0)
             {
                 moveHit = hit;
@@ -194,8 +224,6 @@ public class PlatformerController : MonoBehaviour
     // Debugging
     private void OnDrawGizmos()
     {
-        if (EditorApplication.isPlayingOrWillChangePlaymode == false) return;
-
         // Draw visual raycasts
         Gizmos.color = Color.green;
         var length = _coll.bounds.size.y / GROUND_RAY_DIVISION;
@@ -206,10 +234,11 @@ public class PlatformerController : MonoBehaviour
 
         Gizmos.color = Color.red;
         var wallLength = _coll.bounds.size.x / WALL_RAY_DIVISION;
+        var y = transform.position.y + _coll.offset.y;
         for (int rays = 0; rays < WALL_RAY_AMOUNT; rays++)
         {
             var halfHeight = _coll.bounds.size.y / 2;
-            var pos = new Vector3(transform.position.x, transform.position.y - halfHeight + (halfHeight * rays));
+            var pos = new Vector3(transform.position.x, y - halfHeight + (halfHeight * rays));
             Gizmos.DrawLine(pos, pos + (new Vector3(Mathf.Floor(_lastXInput), 0) * wallLength));
         }
 
