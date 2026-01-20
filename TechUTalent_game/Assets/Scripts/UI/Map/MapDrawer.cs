@@ -10,15 +10,18 @@ public class MapDrawer : MonoBehaviour
     [SerializeField] private float baseSize = 0.1f;
     [SerializeField] private int orderInLayer = 50;
     [SerializeField] private string drawLayer = "UI";
+
     [SerializeField] private Tilemap roomTilemap;
     [SerializeField] private Tile mapTile;
     [SerializeField] private Tile playerTile;
+    [SerializeField] private Tile defaultMarkerTile;
 
     private Transform _mapTransform;
     private Tilemap _mapTilemap;
     private TilemapRenderer _renderer;
 
     private List<Vector3Int> _lastPlayerPositions = new List<Vector3Int>();
+    private List<Vector3Int> _markerPositions = new List<Vector3Int>();
 
     private const string TILE_MAP_NAME = "Tiles";
 
@@ -82,7 +85,7 @@ public class MapDrawer : MonoBehaviour
             var controller = player.GetComponent<PlatformerController>();
 
             var pos = player.transform.position;
-            var tilePos = new Vector3Int(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.y));
+            var tilePos = GetTilePos(pos);
             var bottomPos = new Vector3Int(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(tilePos.y - 1));
             
             _lastPlayerPositions.Add(tilePos);
@@ -102,5 +105,45 @@ public class MapDrawer : MonoBehaviour
             if (_mapTilemap.HasTile(pos) == false) continue;
             _mapTilemap.SetTile(pos, null);
         }
+    }
+
+
+    public void DrawMarkers()
+    {
+        if (_mapTilemap == null) return;
+
+        var markers = MapMarker.ActiveMarkers;
+        if (markers.Count == 0) return;
+
+        RemoveMarkers();
+        _markerPositions.Clear();
+
+        foreach (var marker in markers)
+        {
+            var pos = marker.GetPosition();
+            var tilePos = GetTilePos(pos);
+
+            var tile = marker.MarkerTile ? marker.MarkerTile : defaultMarkerTile;
+
+            _markerPositions.Add(tilePos);
+            _mapTilemap.SetTile(tilePos, tile);
+        }
+    }
+
+    public void RemoveMarkers()
+    {
+        if (_markerPositions.Count == 0) return;
+        foreach (var pos in _markerPositions)
+        {
+            if (_mapTilemap.HasTile(pos) == false) continue;
+            _mapTilemap.SetTile(pos, null);
+        }
+    }
+
+
+
+    private Vector3Int GetTilePos(Vector3 position)
+    {
+        return new Vector3Int(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
     }
 }
