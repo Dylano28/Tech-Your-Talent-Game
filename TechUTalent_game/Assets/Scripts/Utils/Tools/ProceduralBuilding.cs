@@ -18,12 +18,26 @@ public class ProceduralBuilding : MonoBehaviour
     private SpriteRenderer _topSprite;
     private SpriteRenderer _middleSprite;
     private SpriteRenderer _bottomSprite;
+    private const int SPRITE_CHILDREN = 3;
 
 
     private void Start()
     {
-        if (_topSprite || _middleSprite || _bottomSprite) return;
+        var hasSprite = 0;
+        for (int index = 0; index < transform.childCount; index++) if (transform.GetChild(index).GetComponent<SpriteRenderer>()) hasSprite++;
+        if (hasSprite >= SPRITE_CHILDREN)
+        {
+            var renderers = transform.GetComponentsInChildren<SpriteRenderer>();
 
+            _topSprite = renderers[0];
+            _middleSprite = renderers[1];
+            _bottomSprite = renderers[2];
+
+            CalculateSize();
+            return;
+        }
+
+        // Upon first time
         _topSprite = new GameObject().AddComponent<SpriteRenderer>();
         _middleSprite = new GameObject().AddComponent<SpriteRenderer>();
         _bottomSprite = new GameObject().AddComponent<SpriteRenderer>();
