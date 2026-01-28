@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: ehbo_2_not
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Bezorgde Chef
+  speakerName: Sarah
   dialogueSegments:
-  - newPerson: 
-    text: Boohoohoo ik kan niet stoppen met huilen door de uien
+  - newPerson: Jij
+    text: Ik moet die EHBO kit vinden.
     textSpeed: 0
     isSkipable: 1

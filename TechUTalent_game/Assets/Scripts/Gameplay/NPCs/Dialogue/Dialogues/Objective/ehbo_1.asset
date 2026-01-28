@@ -12,18 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: ehbo_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Bezorgde Chef
+  speakerName: Sarah
   dialogueSegments:
   - newPerson: 
-    text: Kunt U een EHBO kit voor mij vinden? Ik heb net mijn vinger gesneden tijdens
-      het snijden van uien en nu huil en bloed ik!
+    text: Hoi daar, mijn medemens. Ik werk in het restaurant een paar blokken verderop,
+      alleen ben ik mijn EHBO kit kwijtgeraakt.
     textSpeed: 0
     isSkipable: 0
   - newPerson: 
-    text: Nu is niet het moment om een infectie te krijgen. Kun je er een halen?
+    text: Ik kan het zelf helaas niet vinden omdat het restaurant erg druk is. Zou
+      jij het voor mij kunnen vinden?
+    textSpeed: 0
+    isSkipable: 0
+  - newPerson: Jij
+    text: Komt voor elkaar chef!
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: Komt voor elkaar chef!
+    text: Erg bedankt, je helpt mij enorm!
     textSpeed: 0
     isSkipable: 1
