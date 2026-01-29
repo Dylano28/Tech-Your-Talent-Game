@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: OmaRolator_2_not
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Oude Oma
+  speakerName: Tessa
   dialogueSegments:
   - newPerson: 
-    text: Ooogh! Ik mis mijn rolator!
+    text: Heb je de rolator al gevonden?
     textSpeed: 0
     isSkipable: 1

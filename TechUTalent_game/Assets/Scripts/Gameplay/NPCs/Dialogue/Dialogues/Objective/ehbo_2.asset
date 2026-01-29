@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: ehbo_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Chef
+  speakerName: Sarah
   dialogueSegments:
-  - newPerson: 
-    text: Heel erg bedankt voor de pleisters!
-    textSpeed: 0
-    isSkipable: 1
   - newPerson: Jij
-    text: Geen dank chef!
+    text: Hoi Sarah, ik heb de EHBO-kit gevonden.
     textSpeed: 0
     isSkipable: 1
-  - newPerson: Blije Chef
-    text: Nu kan ik lekker verder aan de kook
+  - newPerson: 
+    text: Perfecto, erg bedankt!
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Verdachte Sarah
+    text: Er is net iemand door het raam gevlogen, dus we kunnen een flink aantal
+      pleisters en verband gebruiken...
     textSpeed: 0
     isSkipable: 1

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
+  m_Name: injectieNaald_1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
+  speakerName: Lotte
+  dialogueSegments:
+  - newPerson: 
+    text: Goedemiddag.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: "Mijn naam is Lotte en ik ben een laboratoriummedewerker. Ik heb zojuist
+      bloed afgenomen bij een pati\xEBnt,"
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: alleen ben ik de injectienaald ergens kwijtgeraakt nadat ik gevallen ben.
+      Heb jij het toevallig gezien?
+    textSpeed: 0.1
+    isSkipable: 0
+  - newPerson: Jij
+    text: Nee, helaas niet.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: ....
+    textSpeed: 0.25
+    isSkipable: 1
+  - newPerson: 
+    text: Oh jeetje, ik ben zo de klos.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: 
+    text: Ik dacht dat ik alles had ingepakt nadat ik gevallen was, maar blijkbaar
+      niet.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: 
+    text: Omdat ik erg onhandig ben, heb ik al vaker zulke fouten gemaakt.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: 
+    text: Ik hoop echt niet dat ik ontslagen wordt, want dit is heel erg.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: Jij
+    text: Maar waarom was je buiten dan?
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: 
+    text: Het ziekenhuis en het laboratorium zijn twee verschillende locaties.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: 
+    text: Ik was op weg naar het laboratorium om het bloed te onderzoeken.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: Jij
+    text: Oke, duidelijk. Ik zal zoeken voor je!
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: 
+    text: Hartelijk bedankt!
+    textSpeed: 0.1
+    isSkipable: 1

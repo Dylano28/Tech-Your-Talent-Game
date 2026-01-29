@@ -12,9 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: infuus_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Dokter
+  speakerName: Ronald
   dialogueSegments:
+  - newPerson: Jij
+    text: Hey Ronald, ik heb de infuuszak met het buisje gevonden.
+    textSpeed: 0
+    isSkipable: 1
   - newPerson: 
-    text: Nog bedankt! Ik ga nu snel terug...
+    text: Ah, fijn om je weer eens te zien.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: Erg bedankt, ik waardeer je enorm.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: Omdat je mij geholpen hebt krijg je een sticker van mij.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: Kan je nog iets vinden voor mij? volgens mij heb ik perongeluk nog wat
+      achter gelaten.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Jij
+    text: .......
+    textSpeed: 1
+    isSkipable: 1
+  - newPerson: 
+    text: Ik maak maar een grapje haha. Je gezicht staat helemaal zuur.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: Fijne dag nog!
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Jij
+    text: Jij ook Ronald!
     textSpeed: 0
     isSkipable: 1

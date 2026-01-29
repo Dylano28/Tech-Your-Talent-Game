@@ -10,11 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
-  m_Name: Infuus_2_not
+  m_Name: bloedzak_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Ronald
+  speakerName: Koen
   dialogueSegments:
+  - newPerson: 
+    text: Hey bro, nog bedankt voor het helpen. Mijn zusje en ik zijn dankbaar!
+    textSpeed: 0
+    isSkipable: 1
   - newPerson: Jij
-    text: Ik heb de infuuspaal nog niet gevonden.
+    text: Doe de groeten aan haar!
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: Is goed gozer.
     textSpeed: 0
     isSkipable: 1

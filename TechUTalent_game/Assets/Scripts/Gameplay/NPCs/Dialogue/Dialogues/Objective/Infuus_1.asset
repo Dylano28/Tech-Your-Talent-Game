@@ -12,18 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: Infuus_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Dokter
+  speakerName: Ronald
   dialogueSegments:
+  - newPerson: Bezorger
+    text: Hallo
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Jij
+    text: Hallo
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Bezorger
+    text: Ik moet een infuuspaal bezorgen aan het ziekenhuis, alleen is het uit mijn
+      auto gevallen toen ik hiernaar toe was.
+    textSpeed: 0
+    isSkipable: 0
   - newPerson: 
-    text: Hey, kun jij mij helpen een infuus te halen? Het ligt aan de andere kant
-      van de stad!
+    text: Kan jij het voor mij vinden? Mijn naam is Ronald trouwens!
     textSpeed: 0
     isSkipable: 0
   - newPerson: Jij
-    text: Is goed!
+    text: Geen probleem! Ik zal hem brengen als ik het tegen kom.
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: Je moet wel snel zijn, we hebben niet veel tijd.
+    text: Top, dankjewel!
     textSpeed: 0
     isSkipable: 1
