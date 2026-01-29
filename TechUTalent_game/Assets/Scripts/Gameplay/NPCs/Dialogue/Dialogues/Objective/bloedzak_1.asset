@@ -10,39 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
-  m_Name: Infuus_2
+  m_Name: bloedzak_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Ronald
+  speakerName: Koen
   dialogueSegments:
   - newPerson: Jij
-    text: Hoi Ronald, ik heb de infuuspaal gevonden.
+    text: Hallo meneer, kan ik u met iets helpen?
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: 'Erg bedankt jonge man. '
-    textSpeed: 0
-    isSkipable: 1
-  - newPerson: 
-    text: Ik realiseer me dat er nog iets uit de wagen is gevallen.
-    textSpeed: 0
-    isSkipable: 1
-  - newPerson: Jij
-    text: Wat dan?
-    textSpeed: 0
-    isSkipable: 1
-  - newPerson: 
-    text: Ik ben ook de infuuszak met het buisje eraan kwijt geraakt.
+    text: Ja zekers, iemand heeft mijn bloedzak gestolen en ik ben er naar opzoek.
     textSpeed: 0
     isSkipable: 0
   - newPerson: Jij
-    text: Oh
-    textSpeed: 0.2
-    isSkipable: 0
-  - newPerson: Jij
-    text: Ik zal zoeken dan..
-    textSpeed: 0.1
+    text: "Hoe is het mogelijk dat iemand je bloedzak heeft gestolen?\u2019"
+    textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: Top, je bent een strijder!
+    text: Ja, ik weet het ook niet. Maar het is erg belangrijk. Het is voor mijn
+      jongere zusje.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Jij
+    text: "Ok\xE9, ik ga mijn best doen om het voor je te zoeken."
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: 
+    text: Erg bedankt gozer.
     textSpeed: 0.1
     isSkipable: 1

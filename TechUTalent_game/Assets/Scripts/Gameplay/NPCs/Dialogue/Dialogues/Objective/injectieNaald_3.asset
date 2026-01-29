@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
-  m_Name: Infuus_2_not
+  m_Name: injectieNaald_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Ronald
+  speakerName: Lotte
   dialogueSegments:
-  - newPerson: Jij
-    text: Ik heb de infuuspaal nog niet gevonden.
+  - newPerson: 
+    text: Oooh bedankt! Je hebt mij echt gered!
     textSpeed: 0
     isSkipable: 1

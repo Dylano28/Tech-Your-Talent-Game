@@ -15,6 +15,6 @@ MonoBehaviour:
   speakerName: Sarah
   dialogueSegments:
   - newPerson: Jij
-    text: Ik moet die EHBO kit vinden.
+    text: Ik moet die EHBO-kit vinden.
     textSpeed: 0
     isSkipable: 1
