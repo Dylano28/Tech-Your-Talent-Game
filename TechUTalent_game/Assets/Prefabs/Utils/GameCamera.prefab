@@ -2209,7 +2209,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.25
+    y: 0.15092592
     width: 0.27395836
     height: 0.3654205
   near clip plane: 0.3
@@ -2569,7 +2569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2497832363828624d90be01d90f47599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StickerBookDisplay
-  defaultStickerPosition: {x: -6, y: -5.5, z: -4.9}
+  defaultStickerPosition: {x: -6, y: -5.5, z: -0.1}
   stickerMin: {x: -6.2, y: -4.2}
   stickerMax: {x: 6.2, y: 4.2}
   rootStickerParent: {fileID: 3682070695643102146}

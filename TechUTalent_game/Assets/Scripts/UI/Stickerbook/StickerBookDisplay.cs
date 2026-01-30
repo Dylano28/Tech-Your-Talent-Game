@@ -54,10 +54,10 @@ public class StickerBookDisplay : MonoBehaviour
             stickerTransform = stickerTransform ? stickerTransform : rootStickerParent.GetChild(dataIndex).GetComponent<RectTransform>();
             if (data.hasSetSticker == false)
             {
-                stickerTransform.position = defaultStickerPosition;
+                stickerTransform.localPosition = defaultStickerPosition;
                 continue;
             }
-            stickerTransform.position = new Vector3(data.stickerPosition.x, data.stickerPosition.y, defaultStickerPosition.z);
+            stickerTransform.localPosition = new Vector3(data.stickerPosition.x, data.stickerPosition.y, defaultStickerPosition.z);
         }
     }
 
@@ -75,7 +75,7 @@ public class StickerBookDisplay : MonoBehaviour
             _stickerBook.changeStickerPosition(stickerIndex, newPosition);
             return;
         }
-        stickerTransform.position = defaultStickerPosition;
+        stickerTransform.localPosition = defaultStickerPosition;
     }
 
 

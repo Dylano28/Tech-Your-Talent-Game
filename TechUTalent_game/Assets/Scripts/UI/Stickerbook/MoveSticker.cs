@@ -22,7 +22,7 @@ public class MoveSticker : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         _setFirst.AddListener(display.SetToFirst);
 
         _rectTransform = newTransform;
-        _zPos = -display.DefaultStickerPosition.z;
+        _zPos = display.DefaultStickerPosition.z;
     }
 
     public void Setup(StickerBookDisplay display, RectTransform newTransform)
@@ -34,7 +34,7 @@ public class MoveSticker : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         _setFirst.AddListener(display.SetToFirst);
 
         _rectTransform = newTransform;
-        _zPos = -display.DefaultStickerPosition.z;
+        _zPos = display.DefaultStickerPosition.z;
     }
 
 
@@ -66,14 +66,14 @@ public class MoveSticker : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             if (_isDragging == false) return;
             _isDragging = false;
-            _onSetPosition.Invoke(_rectTransform, _rectTransform.position);
+            _onSetPosition.Invoke(_rectTransform, _rectTransform.localPosition);
         }
     }
 
     private void FixedUpdate()
-    {
+    {   
         if (_isDragging  == false) return;
-        var mousePos = Input.mousePosition;
-        _rectTransform.position = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, _zPos));
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.transform.position;
+        _rectTransform.localPosition = new Vector3(mousePos.x, mousePos.y, _zPos);
     }
 }
