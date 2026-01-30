@@ -11,7 +11,8 @@ public class DialogueSettings
         skip,
         reset,
         repeat,
-        collectable
+        collectable,
+        sticker
     }
     private const int MAX_NUMBER = 1000;
 
@@ -29,7 +30,14 @@ public class DialogueSettings
     public DialogueContainer notCollectedDialogue;
     [Tooltip("Make sure to always put next message AFTER this segment")] public Collectable collectable;
 
-    public UnityEvent onCashIn;
+    public UnityEvent onCashInCollectable;
+
+    [Header("Sticker Settings")]
+    public Sticker stickerRequirement;
+    public DialogueContainer noStickerDialogue;
+
+    public UnityEvent onCashInSticker;
+
 
     [HideInInspector] public bool hasBeenCashedIn;
 }

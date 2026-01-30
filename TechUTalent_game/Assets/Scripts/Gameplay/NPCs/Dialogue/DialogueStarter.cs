@@ -29,14 +29,22 @@ public class DialogueStarter : MonoBehaviour
         // Check collected item
         if (currentDialogue.type == DialogueSettings.nextType.collectable)
         {
-            if (CollectableHolder.instance.HasId(currentDialogue.collectable.ID) == false)
-            {
-                segment = currentDialogue.notCollectedDialogue;
-            }
+            if (CollectableHolder.instance.HasId(currentDialogue.collectable.ID) == false) segment = currentDialogue.notCollectedDialogue;
             else if (currentDialogue.hasBeenCashedIn == false)
             {
                 currentDialogue.hasBeenCashedIn = true;
-                currentDialogue.onCashIn.Invoke();
+                currentDialogue.onCashInCollectable.Invoke();
+            }
+        }
+
+        // Check collected stickers
+        if (currentDialogue.type == DialogueSettings.nextType.sticker)
+        {
+            if (StickerBook.instance.HasSticker(currentDialogue.stickerRequirement.ID) == false) segment = currentDialogue.noStickerDialogue;
+            else if (currentDialogue.hasBeenCashedIn == false)
+            {
+                currentDialogue.hasBeenCashedIn = true;
+                currentDialogue.onCashInSticker.Invoke();
             }
         }
 
@@ -69,6 +77,9 @@ public class DialogueStarter : MonoBehaviour
                 }
                 break;
             case DialogueSettings.nextType.collectable:
+                if (currentDialogue.hasBeenCashedIn) break;
+                return;
+            case DialogueSettings.nextType.sticker:
                 if (currentDialogue.hasBeenCashedIn) break;
                 return;
         }

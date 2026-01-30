@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::Sticker
   id: default
-  stickerImage: {fileID: 1817773787, guid: a06f76728637dfe4db05e825f4398418, type: 3}
+  stickerImage: {fileID: 4007494649874246852, guid: aba31d56eaa2d824aa6ae2854edb5534, type: 3}
