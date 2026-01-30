@@ -34,7 +34,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
     public void NextSegment()
     {
         if (_canSkip == false) return;
-        if (_currentSegment > _currentContainer.Segments.Count - 1)
+        if (_currentSegment > Mathf.Clamp(_currentContainer.Segments.Count - 1, 0, _currentContainer.Segments.Count))
         {
             StopDialogue();
             return;

@@ -27,6 +27,8 @@ public class PlatformExpander : MonoBehaviour
 
     private void OnValidate()
     {
+        if (_coll == null || _platformSprite == null) return;
+
         var spriteSize = useSpriteHeight ? new Vector2(1, width) : new Vector2(width, 1);
         _platformSprite.drawMode = SpriteDrawMode.Tiled;
         _platformSprite.size = spriteSize;
