@@ -24,14 +24,6 @@ public class StickerBookDisplay : MonoBehaviour
         rootStickerBook.SetActive(false);
     }
 
-    // TEST, DELETE LATER
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SetStickerField();
-        }
-    }
 
 
     public void SetStickerField()

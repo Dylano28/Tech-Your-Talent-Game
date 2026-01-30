@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ public class MapMenu : MonoBehaviour
     [SerializeField] private Toggle playerToggle;
     [SerializeField] private Button recenter;
     [SerializeField] private Color playerToggleColor = Color.blue;
+    [SerializeField] private List<GameObject> menuMembers = new List<GameObject>();
+    [SerializeField] private List<GameObject> menuAssociates = new List<GameObject>();
 
     private Color NORMAL_TOGGLE = Color.white;
     private Image toggleImage;
@@ -44,6 +47,9 @@ public class MapMenu : MonoBehaviour
 
         _isActive = !_isActive;
         Show(_isActive);
+
+        foreach (var member in menuMembers) member.SetActive(false);
+        foreach (var member in menuAssociates) member.SetActive(true);
 
         if (_isActive == false) return;
         if (_drawMap) mapDrawer.DrawMap();
