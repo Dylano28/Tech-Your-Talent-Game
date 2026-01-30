@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: ehbo_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Blije Chef
+  speakerName: Sarah
   dialogueSegments:
+  - newPerson: Jij
+    text: Er is WAT gebeurd?
+    textSpeed: 0.1
+    isSkipable: 1
   - newPerson: 
-    text: Hmmm, wat zal ik maken?
-    textSpeed: 0
+    text: Ciao, ik ga opruimen.
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: Jij
+    text: Nee wacht ik wil we-
+    textSpeed: 0.1
+    isSkipable: 1
+  - newPerson: Jij
+    text: Laat maar, ze heeft oortjes.
+    textSpeed: 0.1
     isSkipable: 1

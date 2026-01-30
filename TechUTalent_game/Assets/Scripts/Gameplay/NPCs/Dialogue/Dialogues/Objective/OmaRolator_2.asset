@@ -12,23 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d970e7d46c9d90145b8129ef99bab3f2, type: 3}
   m_Name: OmaRolator_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  speakerName: Oude Oma
+  speakerName: Tessa
   dialogueSegments:
-  - newPerson: 
-    text: Ooooogh bedankt kind. Ik voel mij nu al beter!
+  - newPerson: Jij
+    text: Hoi Tessa, ik heb de rollator gevonden!
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: 'Waren er maar meer mensen zoals jij. Mijn rolator had mijn paniek knop
-      in de tas zitten, '
+    text: Top, dankjewel!
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Jij
+    text: Ik ben toch wel benieuwd hoe je het voor elkaar heb gekregen om hem kwijt
+      te raken.
+    textSpeed: 0
+    isSkipable: 1
+  - newPerson: Jij
+    text: Ik vond hem namelijk helemaal boven in op stijgers.
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: 'dus ik kon geen signaal sturen naar de gezondheidszorg. Maar gelukkig
-      was jij in de buurt! '
+    text: Ja, uh..
     textSpeed: 0
     isSkipable: 1
   - newPerson: 
-    text: We hebben meer mensen nodig zoals jij in deze wereld oghooghogh
+    text: i-ik lette niet op oke!?
     textSpeed: 0
     isSkipable: 1
+  - newPerson: Jij
+    text: ...
+    textSpeed: 0.5
+    isSkipable: 0
+  - newPerson: Jij
+    text: "Ok\xE9"
+    textSpeed: 0.1
+    isSkipable: 0
