@@ -71,4 +71,26 @@ public class StickerBook : Singleton<StickerBook>
         stickerData.stickerPosition = newPosition;
         stickerData.hasSetSticker = true;
     }
+
+    public void SwapSticker(int stickerIndex, int swapStickerIndex)
+    {
+        var from = dataSet[stickerIndex];
+        var to = dataSet[swapStickerIndex];
+        dataSet[swapStickerIndex] = from;
+        dataSet[stickerIndex] = to;
+    }
+
+    public void PushToFront(int index)
+    {
+        var data = dataSet[index];
+        dataSet.RemoveAt(index);
+        dataSet.Insert(0, data);
+    }
+
+    public void PushToBack(int index)
+    {
+        var data = dataSet[index];
+        dataSet.RemoveAt(index);
+        dataSet.Add(data);
+    }
 }
