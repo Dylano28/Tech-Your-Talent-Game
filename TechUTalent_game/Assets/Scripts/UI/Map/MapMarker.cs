@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class MapMarker : MonoBehaviour
 {
+    [SerializeField] private bool start = true;
     [SerializeField] private Transform markerTransform;
     [SerializeField] private Tile markerTile;
     public Tile MarkerTile => markerTile;
@@ -25,9 +26,11 @@ public class MapMarker : MonoBehaviour
     public static List<MapMarker> ActiveMarkers => _activeMarkers;
 
 
-    private void Start() { isActive = true; }
+    private void Start() { isActive = start; }
 
     public Vector2 GetPosition() { return markerTransform.position; }
 
     public void SetMarker(bool newActive) { isActive = newActive; }
+
+    public void OnDestroy() { isActive = false; }
 }
