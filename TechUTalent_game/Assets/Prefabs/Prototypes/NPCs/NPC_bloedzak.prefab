@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3305148356017027433}
   - component: {fileID: 5092999865783231072}
   m_Layer: 0
-  m_Name: NPC_pillen
+  m_Name: NPC_bloedzak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueStarter
   dialogueInteractable: {fileID: 3305148356017027433}
   dialogueParts:
-  - dialogue: {fileID: 11400000, guid: bfc26447c4a5a9549a3724d7f8e7d44f, type: 2}
+  - dialogue: {fileID: 11400000, guid: 4f6dfd281cf9f7548b2f609db225e0bb, type: 2}
     type: 0
     repeat: 2
     skipTo: 0
@@ -309,36 +309,34 @@ MonoBehaviour:
           m_CallState: 2
     notCollectedDialogue: {fileID: 0}
     collectable: {fileID: 0}
-    onCashIn:
+    onCashInCollectable:
+      m_PersistentCalls:
+        m_Calls: []
+    stickerRequirement: {fileID: 0}
+    noStickerDialogue: {fileID: 0}
+    onCashInSticker:
       m_PersistentCalls:
         m_Calls: []
     hasBeenCashedIn: 0
-  - dialogue: {fileID: 11400000, guid: 6ee68cf17860fcb4990f2f96faaa7346, type: 2}
+  - dialogue: {fileID: 11400000, guid: 91d2e6fd72c4cbc4eb18e9ab56a09ce4, type: 2}
     type: 4
     repeat: 2
     skipTo: 0
     onStart:
       m_PersistentCalls:
         m_Calls: []
-    notCollectedDialogue: {fileID: 11400000, guid: 68f15921c7eb9a943b57c29e632d360a, type: 2}
+    notCollectedDialogue: {fileID: 11400000, guid: 8f355dbe321764a42b503eca3816b0ff, type: 2}
     collectable: {fileID: 11400000, guid: c34b585da46f99f418baddb8d5a23a45, type: 2}
-    onCashIn:
+    onCashInCollectable:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1934796071160345570}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
+    stickerRequirement: {fileID: 0}
+    noStickerDialogue: {fileID: 0}
+    onCashInSticker:
+      m_PersistentCalls:
+        m_Calls: []
     hasBeenCashedIn: 0
-  - dialogue: {fileID: 11400000, guid: d96edd9e7d42f424c84c3df8295cddd2, type: 2}
+  - dialogue: {fileID: 11400000, guid: cf4fc89cb1bd40b4484b161076daba47, type: 2}
     type: 0
     repeat: 2
     skipTo: 0
@@ -347,7 +345,12 @@ MonoBehaviour:
         m_Calls: []
     notCollectedDialogue: {fileID: 0}
     collectable: {fileID: 0}
-    onCashIn:
+    onCashInCollectable:
+      m_PersistentCalls:
+        m_Calls: []
+    stickerRequirement: {fileID: 0}
+    noStickerDialogue: {fileID: 0}
+    onCashInSticker:
       m_PersistentCalls:
         m_Calls: []
     hasBeenCashedIn: 0
