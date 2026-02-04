@@ -31691,6 +31691,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8040727888819746582, guid: 194b666f4ed7abb48ad51a0163271153, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9685352
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040727888819746582, guid: 194b666f4ed7abb48ad51a0163271153, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.7310386
+      objectReference: {fileID: 0}
     - target: {fileID: 8755862075551487838, guid: 194b666f4ed7abb48ad51a0163271153, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -32986,11 +32994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.7
+      value: 18.29
       objectReference: {fileID: 0}
     - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.06
+      value: -16.032
       objectReference: {fileID: 0}
     - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
       propertyPath: m_LocalPosition.z

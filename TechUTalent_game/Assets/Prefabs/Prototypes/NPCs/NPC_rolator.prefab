@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 8040727888819746582}
   - component: {fileID: 3305148356017027433}
   - component: {fileID: 5092999865783231072}
+  - component: {fileID: 6984417127635688219}
   m_Layer: 0
   m_Name: NPC_rolator
   m_TagString: Untagged
@@ -307,9 +308,26 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 6984417127635688219}
+          m_TargetAssemblyTypeName: MapMarker, Assembly-CSharp
+          m_MethodName: SetMarker
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     notCollectedDialogue: {fileID: 0}
     collectable: {fileID: 0}
-    onCashIn:
+    onCashInCollectable:
+      m_PersistentCalls:
+        m_Calls: []
+    stickerRequirement: {fileID: 0}
+    noStickerDialogue: {fileID: 0}
+    onCashInSticker:
       m_PersistentCalls:
         m_Calls: []
     hasBeenCashedIn: 0
@@ -322,7 +340,7 @@ MonoBehaviour:
         m_Calls: []
     notCollectedDialogue: {fileID: 11400000, guid: 614b27cd405128d4dba24510079c2c23, type: 2}
     collectable: {fileID: 11400000, guid: 73e19c45ee7c47b46a58aeccce4235b4, type: 2}
-    onCashIn:
+    onCashInCollectable:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1934796071160345570}
@@ -337,6 +355,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    stickerRequirement: {fileID: 0}
+    noStickerDialogue: {fileID: 0}
+    onCashInSticker:
+      m_PersistentCalls:
+        m_Calls: []
     hasBeenCashedIn: 0
   - dialogue: {fileID: 11400000, guid: ed5259fada7337b46848524245617b30, type: 2}
     type: 0
@@ -344,13 +367,45 @@ MonoBehaviour:
     skipTo: 0
     onStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 6984417127635688219}
+          m_TargetAssemblyTypeName: MapMarker, Assembly-CSharp
+          m_MethodName: SetMarker
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     notCollectedDialogue: {fileID: 0}
     collectable: {fileID: 0}
-    onCashIn:
+    onCashInCollectable:
+      m_PersistentCalls:
+        m_Calls: []
+    stickerRequirement: {fileID: 0}
+    noStickerDialogue: {fileID: 0}
+    onCashInSticker:
       m_PersistentCalls:
         m_Calls: []
     hasBeenCashedIn: 0
+--- !u!114 &6984417127635688219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462303618521216112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd6865586546194d8c066190bfe22fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapMarker
+  start: 0
+  markerTransform: {fileID: 7933447614688974232}
+  markerTile: {fileID: 0}
 --- !u!1 &7189960465353690187
 GameObject:
   m_ObjectHideFlags: 0
