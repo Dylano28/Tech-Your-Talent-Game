@@ -63,16 +63,24 @@ public class StickerBookDisplay : MonoBehaviour
 
     public void ChangeStickerPosition(RectTransform stickerTransform, Vector2 newPosition)
     {
+        var stickerIndex = 0;
+        for (stickerIndex = 0; stickerIndex < rootStickerParent.childCount; stickerIndex++)
+        {
+            if (rootStickerParent.GetChild(stickerIndex).GetComponent<RectTransform>() == stickerTransform) break;
+        }
+
         var fitMax = newPosition.x < stickerMax.x && newPosition.y < stickerMax.y;
         var fitMin = newPosition.x > stickerMin.x && newPosition.y > stickerMin.y;
         if (fitMax && fitMin)
         {
-            var stickerIndex = 0;
-            for (stickerIndex = 0; stickerIndex < rootStickerParent.childCount; stickerIndex++)
-            {
-                if (rootStickerParent.GetChild(stickerIndex).GetComponent<RectTransform>() == stickerTransform) break;
-            }
             _stickerBook.changeStickerPosition(stickerIndex, newPosition);
+            return;
+        }
+
+        var lastPosition = _stickerBook.DataSet[stickerIndex].stickerPosition;
+        if (lastPosition != Vector2.zero)
+        {
+            stickerTransform.localPosition = lastPosition;
             return;
         }
         stickerTransform.localPosition = defaultStickerPosition;
