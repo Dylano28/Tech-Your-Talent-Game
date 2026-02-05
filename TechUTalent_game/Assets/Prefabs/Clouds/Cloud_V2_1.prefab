@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5412588887082093630}
   - component: {fileID: 694774460781873345}
-  - component: {fileID: -7222785267461465504}
+  - component: {fileID: 7421118199943918268}
   m_Layer: 0
   m_Name: Cloud_V2_1
   m_TagString: Untagged
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7222785267461465504
+--- !u!114 &7421118199943918268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2398212600481572475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3165b22ead741ab459a3abe59687d535, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f14581112d9e2a4c9e279a93071520f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CloudGenerator
-  speed: 2
-  endPosX: 40
+  m_EditorClassIdentifier: Assembly-CSharp::Cloud
+  speed: 2.5
+  endPosX: 16

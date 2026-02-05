@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2338340477719278087}
   - component: {fileID: 8333405489791877787}
   - component: {fileID: 4557457090302264633}
-  - component: {fileID: 56381135913158080}
+  - component: {fileID: 9176798442210591407}
   m_Layer: 0
   m_Name: Cloud_V2_0
   m_TagString: Untagged
@@ -114,7 +114,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &56381135913158080
+--- !u!114 &9176798442210591407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1908803547078706359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3165b22ead741ab459a3abe59687d535, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f14581112d9e2a4c9e279a93071520f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CloudGenerator
-  speed: 1.5
-  endPosX: 40
+  m_EditorClassIdentifier: Assembly-CSharp::Cloud
+  speed: 2
+  endPosX: 15
