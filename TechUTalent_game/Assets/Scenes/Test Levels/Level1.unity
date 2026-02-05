@@ -34469,84 +34469,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0509945b9617a074c84d4b4f41285815, type: 3}
   m_PrefabInstance: {fileID: 1140936083}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &956885603
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1965783784}
-    m_Modifications:
-    - target: {fileID: 2462303618521216112, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_Name
-      value: NPC 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 18.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -16.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8040727888819746582, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 100.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 8040727888819746582, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 210.03276
-      objectReference: {fileID: 0}
-    - target: {fileID: 8755862075551487838, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 6997741227164693895, guid: 57e1807e53a1b764d8c359ad7721d3ef, type: 3}
-    - target: {fileID: 8755862075551487838, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
---- !u!4 &956885604 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7933447614688974232, guid: 4f93cc91597a1e2468bcd94ce2039256, type: 3}
-  m_PrefabInstance: {fileID: 956885603}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &962794291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36803,6 +36725,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8755862075551487838, guid: 266c9e47916c1d34b859f23133fff8fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6520936677976288497, guid: 7a4de3a7a280a6c4688a83d1ddc2ffb5, type: 3}
+    - target: {fileID: 8755862075551487838, guid: 266c9e47916c1d34b859f23133fff8fa, type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
@@ -38285,7 +38211,6 @@ Transform:
   - {fileID: 63084889}
   - {fileID: 2119869082}
   - {fileID: 264536641}
-  - {fileID: 956885604}
   - {fileID: 252855505}
   - {fileID: 424058848}
   - {fileID: 1838484570}
