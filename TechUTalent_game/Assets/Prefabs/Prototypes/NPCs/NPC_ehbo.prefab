@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 3305148356017027433}
   - component: {fileID: 5092999865783231072}
   - component: {fileID: 7287364241428443730}
+  - component: {fileID: 1643200090513946999}
   m_Layer: 0
   m_Name: NPC_ehbo
   m_TagString: Untagged
@@ -355,6 +356,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1643200090513946999}
+          m_TargetAssemblyTypeName: AddSticker, Assembly-CSharp
+          m_MethodName: AddStickerToStickerBook
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     stickerRequirement: {fileID: 0}
     noStickerDialogue: {fileID: 0}
     onCashInSticker:
@@ -406,6 +419,19 @@ MonoBehaviour:
   start: 0
   markerTransform: {fileID: 7933447614688974232}
   markerTile: {fileID: 0}
+--- !u!114 &1643200090513946999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462303618521216112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a2c4346beef1f46be44aee62460253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddSticker
+  newSticker: {fileID: 11400000, guid: 6b4fb9eff05fb6243bd792f11935daff, type: 2}
 --- !u!1 &6292808583708523649
 GameObject:
   m_ObjectHideFlags: 0

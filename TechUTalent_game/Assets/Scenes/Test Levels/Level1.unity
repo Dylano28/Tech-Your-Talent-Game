@@ -36394,6 +36394,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d20d82f97558fe94b927a26315151b77, type: 3}
+--- !u!1 &1594636669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1594636671}
+  - component: {fileID: 1594636670}
+  m_Layer: 0
+  m_Name: Stickerbook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1594636670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594636669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc13529aedc92c4aa908a82f964c32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerBook
+  keepInstance: 1
+  starterStickers: []
+--- !u!4 &1594636671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594636669}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1603786713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 414268475752630910, guid: 18ba5861ad1fb7d44b8037796fd13524, type: 3}
@@ -36723,6 +36769,14 @@ PrefabInstance:
     - target: {fileID: 7933447614688974232, guid: 266c9e47916c1d34b859f23133fff8fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040727888819746582, guid: 266c9e47916c1d34b859f23133fff8fa, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.91267306
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040727888819746582, guid: 266c9e47916c1d34b859f23133fff8fa, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.1750336
       objectReference: {fileID: 0}
     - target: {fileID: 8755862075551487838, guid: 266c9e47916c1d34b859f23133fff8fa, type: 3}
       propertyPath: m_Sprite
@@ -37232,6 +37286,14 @@ PrefabInstance:
     - target: {fileID: 7933447614688974232, guid: c6e32ea880d101243a7cfb9e7bde8062, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040727888819746582, guid: c6e32ea880d101243a7cfb9e7bde8062, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9707619
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040727888819746582, guid: c6e32ea880d101243a7cfb9e7bde8062, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.033428
       objectReference: {fileID: 0}
     - target: {fileID: 8755862075551487838, guid: c6e32ea880d101243a7cfb9e7bde8062, type: 3}
       propertyPath: m_Sprite
@@ -39366,6 +39428,7 @@ SceneRoots:
   - {fileID: 1606962623}
   - {fileID: 1965783784}
   - {fileID: 1574216389}
+  - {fileID: 1594636671}
   - {fileID: 530771458}
   - {fileID: 58836329}
   - {fileID: 1448839523}
