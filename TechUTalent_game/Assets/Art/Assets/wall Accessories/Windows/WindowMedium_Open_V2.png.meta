@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 199d950522441e948b93c62bb4b73676
+guid: 01555ed3e35acf346ac50de021a79028
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1249404186299549461
-    second: Flowerbox_V1_0
+      213: -3360950123967945388
+    second: WindowMedium_Open_V2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flowerbox_V1_0
+      name: WindowMedium_Open_V2_0
       rect:
         serializedVersion: 2
-        x: 996
-        y: 185
-        width: 275
-        height: 134
+        x: 174
+        y: 195
+        width: 461
+        height: 413
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5174541ec76c65110800000000000000
-      internalID: 1249404186299549461
+      spriteID: 455e5195ba18b51d0800000000000000
+      internalID: -3360950123967945388
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flowerbox_V1_0: 1249404186299549461
+      WindowMedium_Open_V2_0: -3360950123967945388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
