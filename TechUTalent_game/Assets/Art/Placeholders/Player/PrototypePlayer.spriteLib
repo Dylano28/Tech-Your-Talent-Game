@@ -30,174 +30,174 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Avatar_walking cycle_00000_0
       m_Hash: 205359550
-      m_Sprite: {fileID: 919278446641925849, guid: 5c48708b13ce462408029990b8fe5949, type: 3}
+      m_Sprite: {fileID: 4207092551964672718, guid: 28f226bdaf46c0947a7cce89de6c1b5d, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 919278446641925849, guid: 5c48708b13ce462408029990b8fe5949, type: 3}
+      m_SpriteOverride: {fileID: 4207092551964672718, guid: 28f226bdaf46c0947a7cce89de6c1b5d, type: 3}
     - m_Name: Avatar_walking cycle_00002_0
       m_Hash: 263806416
-      m_Sprite: {fileID: 6276418031636456954, guid: 0325a1581f2b11249a9c952ed6ad5205, type: 3}
+      m_Sprite: {fileID: 6955987513873623019, guid: cec2e82a61a0abf43ad5dd0f26bf58b0, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6276418031636456954, guid: 0325a1581f2b11249a9c952ed6ad5205, type: 3}
+      m_SpriteOverride: {fileID: 6955987513873623019, guid: cec2e82a61a0abf43ad5dd0f26bf58b0, type: 3}
     - m_Name: Avatar_walking cycle_00004_0
       m_Hash: 187965794
-      m_Sprite: {fileID: 2778543505205091250, guid: e04ca00a5c0666c4dbf9bf54cb7cb4b1, type: 3}
+      m_Sprite: {fileID: -5732665730391520717, guid: 825223a1cd0defb488eb9d5b9903d8dc, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 2778543505205091250, guid: e04ca00a5c0666c4dbf9bf54cb7cb4b1, type: 3}
+      m_SpriteOverride: {fileID: -5732665730391520717, guid: 825223a1cd0defb488eb9d5b9903d8dc, type: 3}
     - m_Name: Avatar_walking cycle_00006_0
       m_Hash: 145814796
-      m_Sprite: {fileID: 5324930038326692666, guid: ff0f1ed2caac8e749ade7e9f77138957, type: 3}
+      m_Sprite: {fileID: 8375668011650994132, guid: 29ecceee935354543a6ea9a9be7d3893, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 5324930038326692666, guid: ff0f1ed2caac8e749ade7e9f77138957, type: 3}
+      m_SpriteOverride: {fileID: 8375668011650994132, guid: 29ecceee935354543a6ea9a9be7d3893, type: 3}
     - m_Name: Avatar_walking cycle_00008_0
       m_Hash: 36624390
-      m_Sprite: {fileID: -7927113164458416699, guid: acce5ad43009082429ebe8bdeaada769, type: 3}
+      m_Sprite: {fileID: -6234807037919365443, guid: b39b9ec3d2fb44544b4e77c22a78ebc6, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -7927113164458416699, guid: acce5ad43009082429ebe8bdeaada769, type: 3}
+      m_SpriteOverride: {fileID: -6234807037919365443, guid: b39b9ec3d2fb44544b4e77c22a78ebc6, type: 3}
     - m_Name: Avatar_walking cycle_00010_0
       m_Hash: 880930523
-      m_Sprite: {fileID: -3190167006033521206, guid: 51663e6e11f3fba4f8a7e5a8a805435a, type: 3}
+      m_Sprite: {fileID: 8483936286562192294, guid: fc6d749bf7ab80542b24a575e410cc98, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3190167006033521206, guid: 51663e6e11f3fba4f8a7e5a8a805435a, type: 3}
+      m_SpriteOverride: {fileID: 8483936286562192294, guid: fc6d749bf7ab80542b24a575e410cc98, type: 3}
     - m_Name: Avatar_walking cycle_00012_0
       m_Hash: 923089589
-      m_Sprite: {fileID: 6038239593154063809, guid: fb0dea88b05dba246921c90be744c42e, type: 3}
+      m_Sprite: {fileID: -4293319721777814742, guid: 5e45c16fb30e6694db492910b437cfce, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6038239593154063809, guid: fb0dea88b05dba246921c90be744c42e, type: 3}
+      m_SpriteOverride: {fileID: -4293319721777814742, guid: 5e45c16fb30e6694db492910b437cfce, type: 3}
     - m_Name: Avatar_walking cycle_00014_0
       m_Hash: 864568839
-      m_Sprite: {fileID: 7246163820891068780, guid: 1d39185897c81b946b88e0cbe082a6a6, type: 3}
+      m_Sprite: {fileID: -6672514810600983502, guid: 452746e03fc590f42b34de4e7342b360, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7246163820891068780, guid: 1d39185897c81b946b88e0cbe082a6a6, type: 3}
+      m_SpriteOverride: {fileID: -6672514810600983502, guid: 452746e03fc590f42b34de4e7342b360, type: 3}
     - m_Name: Avatar_walking cycle_00015_1
       m_Hash: 88939686
-      m_Sprite: {fileID: 8950831106785381964, guid: a7e1369d673c09d40ab0931ba74812e3, type: 3}
+      m_Sprite: {fileID: -6882095248963378933, guid: 3860baba424334845856839d96b19553, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 8950831106785381964, guid: a7e1369d673c09d40ab0931ba74812e3, type: 3}
+      m_SpriteOverride: {fileID: -6882095248963378933, guid: 3860baba424334845856839d96b19553, type: 3}
     - m_Name: Avatar_walking cycle_00016_1
       m_Hash: 118203135
-      m_Sprite: {fileID: -2805789240648149164, guid: 586e0efc146c3e344884692a865625b3, type: 3}
+      m_Sprite: {fileID: -7797452685500677091, guid: a7dbce7a209d69d4dbc101a24ca9bb8d, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2805789240648149164, guid: 586e0efc146c3e344884692a865625b3, type: 3}
+      m_SpriteOverride: {fileID: -7797452685500677091, guid: a7dbce7a209d69d4dbc101a24ca9bb8d, type: 3}
     - m_Name: Avatar_walking cycle_00017_1
       m_Hash: 113887432
-      m_Sprite: {fileID: -1305393646830472097, guid: 55da9cc79b20c314caad712e4d3e0501, type: 3}
+      m_Sprite: {fileID: 6037562786944400536, guid: 87bcda22ad4d8ef42879196e42932c95, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -1305393646830472097, guid: 55da9cc79b20c314caad712e4d3e0501, type: 3}
+      m_SpriteOverride: {fileID: 6037562786944400536, guid: 87bcda22ad4d8ef42879196e42932c95, type: 3}
     - m_Name: Avatar_walking cycle_00019_0
       m_Hash: 995153236
-      m_Sprite: {fileID: -7051383416874896031, guid: 461108f68c6e73b429f24f32b2c2b219, type: 3}
+      m_Sprite: {fileID: -6578206752493534080, guid: d45ede45b3c285646a63af99f77ab565, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -7051383416874896031, guid: 461108f68c6e73b429f24f32b2c2b219, type: 3}
+      m_SpriteOverride: {fileID: -6578206752493534080, guid: d45ede45b3c285646a63af99f77ab565, type: 3}
     - m_Name: Avatar_walking cycle_00021_0
       m_Hash: 670444290
-      m_Sprite: {fileID: -7286885024317997640, guid: 15550179c6f41a945b510874784616d3, type: 3}
+      m_Sprite: {fileID: -664331214238679214, guid: 1d269c93bcf4bc2448e0a81fb6547a2d, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -7286885024317997640, guid: 15550179c6f41a945b510874784616d3, type: 3}
+      m_SpriteOverride: {fileID: -664331214238679214, guid: 1d269c93bcf4bc2448e0a81fb6547a2d, type: 3}
     - m_Name: Avatar_walking cycle_00023_0
       m_Hash: 611516268
-      m_Sprite: {fileID: 1074448093811324940, guid: 7ca601d69bf0c4d47b2e92df321ea819, type: 3}
+      m_Sprite: {fileID: 405923228146387781, guid: e2c180d3dae5aea47a6b62f007770178, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1074448093811324940, guid: 7ca601d69bf0c4d47b2e92df321ea819, type: 3}
+      m_SpriteOverride: {fileID: 405923228146387781, guid: e2c180d3dae5aea47a6b62f007770178, type: 3}
     - m_Name: Avatar_walking cycle_00025_0
       m_Hash: 553616350
-      m_Sprite: {fileID: 5717247634875475590, guid: 0087a99942306ac4e91ae1e9e0db1f73, type: 3}
+      m_Sprite: {fileID: 3235659407199174589, guid: 5b7355aa891e8c84093feedcb2b32e03, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 5717247634875475590, guid: 0087a99942306ac4e91ae1e9e0db1f73, type: 3}
+      m_SpriteOverride: {fileID: 3235659407199174589, guid: 5b7355aa891e8c84093feedcb2b32e03, type: 3}
     - m_Name: Avatar_walking cycle_00027_0
       m_Hash: 595285936
-      m_Sprite: {fileID: 3014194715688189365, guid: d35de12727ac30943a2dec7059fbcc10, type: 3}
+      m_Sprite: {fileID: -4981272191665963533, guid: 16f5cd5d19a187c4cbd9b20ff3da323e, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 3014194715688189365, guid: d35de12727ac30943a2dec7059fbcc10, type: 3}
+      m_SpriteOverride: {fileID: -4981272191665963533, guid: 16f5cd5d19a187c4cbd9b20ff3da323e, type: 3}
     - m_Name: Avatar_walking cycle_00029_0
       m_Hash: 702905018
-      m_Sprite: {fileID: -6650058647728500911, guid: 3e25a4fb6464de341875e6f189fa5ceb, type: 3}
+      m_Sprite: {fileID: 3771713952231519930, guid: 5b1ef128a12dd5a46901a35f71951983, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -6650058647728500911, guid: 3e25a4fb6464de341875e6f189fa5ceb, type: 3}
+      m_SpriteOverride: {fileID: 3771713952231519930, guid: 5b1ef128a12dd5a46901a35f71951983, type: 3}
     - m_Name: Avatar_walking cycle_00031_0
       m_Hash: 524962919
-      m_Sprite: {fileID: -4072193645685928077, guid: e4f22679daafb77458a5515b22fd0a69, type: 3}
+      m_Sprite: {fileID: -4641415970130830924, guid: 7ca8787a1d8093446922c381fcffd936, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -4072193645685928077, guid: e4f22679daafb77458a5515b22fd0a69, type: 3}
+      m_SpriteOverride: {fileID: -4641415970130830924, guid: 7ca8787a1d8093446922c381fcffd936, type: 3}
     - m_Name: Avatar_walking cycle_00033_0
       m_Hash: 483301385
-      m_Sprite: {fileID: 6425353989925632605, guid: c9491cc6032fc034fbdc394a4f3ffa6b, type: 3}
+      m_Sprite: {fileID: -2642197192388917318, guid: 953cb013134f92347909f517e9745190, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6425353989925632605, guid: c9491cc6032fc034fbdc394a4f3ffa6b, type: 3}
+      m_SpriteOverride: {fileID: -2642197192388917318, guid: 953cb013134f92347909f517e9745190, type: 3}
     - m_Name: Avatar_walking cycle_00035_0
       m_Hash: 407102651
-      m_Sprite: {fileID: -4159047973914262314, guid: fad634ad64df60d4a909af414d9458bc, type: 3}
+      m_Sprite: {fileID: -4935459470349107826, guid: 25b759ffc1eeb3c4db0db89775080c17, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -4159047973914262314, guid: fad634ad64df60d4a909af414d9458bc, type: 3}
+      m_SpriteOverride: {fileID: -4935459470349107826, guid: 25b759ffc1eeb3c4db0db89775080c17, type: 3}
     - m_Name: Avatar_walking cycle_00037_0
       m_Hash: 466038997
-      m_Sprite: {fileID: 7444606499575522585, guid: 3b438997760f7a74a97cd57ea527bc7f, type: 3}
+      m_Sprite: {fileID: 6261148434138798823, guid: 00ed77fbdd793c0459c8fd67f32ff59f, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7444606499575522585, guid: 3b438997760f7a74a97cd57ea527bc7f, type: 3}
+      m_SpriteOverride: {fileID: 6261148434138798823, guid: 00ed77fbdd793c0459c8fd67f32ff59f, type: 3}
     - m_Name: Avatar_walking cycle_00039_0
       m_Hash: 291053023
-      m_Sprite: {fileID: -2581254429470316165, guid: 915adeefbc68ae64ea2257a0e0ddd08d, type: 3}
+      m_Sprite: {fileID: 3748557931651845012, guid: bf71ad92165c08c4f88957fdef8052e1, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2581254429470316165, guid: 915adeefbc68ae64ea2257a0e0ddd08d, type: 3}
+      m_SpriteOverride: {fileID: 3748557931651845012, guid: bf71ad92165c08c4f88957fdef8052e1, type: 3}
     - m_Name: Avatar_walking cycle_00041_0
       m_Hash: 43873502
-      m_Sprite: {fileID: 6107077491272809067, guid: 528026b8c33cb3743b149bd00241ed0b, type: 3}
+      m_Sprite: {fileID: 2494976651363365138, guid: d4371a5998fff2b47b6825e49162dee8, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6107077491272809067, guid: 528026b8c33cb3743b149bd00241ed0b, type: 3}
+      m_SpriteOverride: {fileID: 2494976651363365138, guid: d4371a5998fff2b47b6825e49162dee8, type: 3}
     - m_Name: Avatar_walking cycle_00043_0
       m_Hash: 18456752
-      m_Sprite: {fileID: -3387274156861296138, guid: 662959fe36524f341bd08a29a853e0f1, type: 3}
+      m_Sprite: {fileID: -4732006586121587958, guid: a0387aa8a5c0d6f42bfb1e506c3ff668, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3387274156861296138, guid: 662959fe36524f341bd08a29a853e0f1, type: 3}
+      m_SpriteOverride: {fileID: -4732006586121587958, guid: a0387aa8a5c0d6f42bfb1e506c3ff668, type: 3}
     - m_Name: Avatar_walking cycle_00045_0
       m_Hash: 93641730
-      m_Sprite: {fileID: 1330509455461580237, guid: 82dcb6127a010e143b72180aa13a88d1, type: 3}
+      m_Sprite: {fileID: -9082451570557580190, guid: d60ba9073a574614b8023ef2664d8122, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1330509455461580237, guid: 82dcb6127a010e143b72180aa13a88d1, type: 3}
+      m_SpriteOverride: {fileID: -9082451570557580190, guid: d60ba9073a574614b8023ef2664d8122, type: 3}
     - m_Name: Avatar_walking cycle_00047_0
       m_Hash: 101714028
-      m_Sprite: {fileID: -5302430322400761760, guid: d91beedebd5629747a8bdd72fb14f118, type: 3}
+      m_Sprite: {fileID: 4207092551964672718, guid: 28f226bdaf46c0947a7cce89de6c1b5d, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -5302430322400761760, guid: d91beedebd5629747a8bdd72fb14f118, type: 3}
+      m_SpriteOverride: {fileID: 4207092551964672718, guid: 28f226bdaf46c0947a7cce89de6c1b5d, type: 3}
     - m_Name: Avatar_walking cycle_00049_0
       m_Hash: 210642278
-      m_Sprite: {fileID: 9055418825101435420, guid: d4ca2910d035f42429a6a3a645c76079, type: 3}
+      m_Sprite: {fileID: 6955987513873623019, guid: cec2e82a61a0abf43ad5dd0f26bf58b0, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 9055418825101435420, guid: d4ca2910d035f42429a6a3a645c76079, type: 3}
+      m_SpriteOverride: {fileID: 6955987513873623019, guid: cec2e82a61a0abf43ad5dd0f26bf58b0, type: 3}
     - m_Name: Avatar_walking cycle_00051_0
       m_Hash: 975246267
-      m_Sprite: {fileID: 8001071946426132887, guid: ff2fa6474580d544f8d64084c3441e86, type: 3}
+      m_Sprite: {fileID: -5732665730391520717, guid: 825223a1cd0defb488eb9d5b9903d8dc, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 8001071946426132887, guid: ff2fa6474580d544f8d64084c3441e86, type: 3}
+      m_SpriteOverride: {fileID: -5732665730391520717, guid: 825223a1cd0defb488eb9d5b9903d8dc, type: 3}
     - m_Name: Avatar_walking cycle_00053_0
       m_Hash: 967165909
-      m_Sprite: {fileID: -2579841223631512789, guid: 417a6e0e52d1014468e4a1fb59fae3c1, type: 3}
+      m_Sprite: {fileID: 8375668011650994132, guid: 29ecceee935354543a6ea9a9be7d3893, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2579841223631512789, guid: 417a6e0e52d1014468e4a1fb59fae3c1, type: 3}
+      m_SpriteOverride: {fileID: 8375668011650994132, guid: 29ecceee935354543a6ea9a9be7d3893, type: 3}
     - m_Name: Avatar_walking cycle_00055_0
       m_Hash: 1026079591
-      m_Sprite: {fileID: -9021371341163999573, guid: 835f7d0ff05e6794794e19a9764d11ec, type: 3}
+      m_Sprite: {fileID: -6234807037919365443, guid: b39b9ec3d2fb44544b4e77c22a78ebc6, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -9021371341163999573, guid: 835f7d0ff05e6794794e19a9764d11ec, type: 3}
+      m_SpriteOverride: {fileID: -6234807037919365443, guid: b39b9ec3d2fb44544b4e77c22a78ebc6, type: 3}
     - m_Name: Avatar_walking cycle_00057_0
       m_Hash: 1051488009
-      m_Sprite: {fileID: 6141255923975214558, guid: 0ba095ae8b5b47645a36dd8b34638be9, type: 3}
+      m_Sprite: {fileID: 8483936286562192294, guid: fc6d749bf7ab80542b24a575e410cc98, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6141255923975214558, guid: 0ba095ae8b5b47645a36dd8b34638be9, type: 3}
+      m_SpriteOverride: {fileID: 8483936286562192294, guid: fc6d749bf7ab80542b24a575e410cc98, type: 3}
     - m_Name: Avatar_walking cycle_00059_0
       m_Hash: 875708931
-      m_Sprite: {fileID: 3882720390174652409, guid: a44fa192caaa3c945a5f5f34f227ff78, type: 3}
+      m_Sprite: {fileID: -4293319721777814742, guid: 5e45c16fb30e6694db492910b437cfce, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 3882720390174652409, guid: a44fa192caaa3c945a5f5f34f227ff78, type: 3}
+      m_SpriteOverride: {fileID: -4293319721777814742, guid: 5e45c16fb30e6694db492910b437cfce, type: 3}
     - m_Name: Avatar_walking cycle_00061_0
       m_Hash: 680836181
-      m_Sprite: {fileID: -2447468891091970461, guid: 58640f088c40e4d4da34d4e641e91913, type: 3}
+      m_Sprite: {fileID: -6672514810600983502, guid: 452746e03fc590f42b34de4e7342b360, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2447468891091970461, guid: 58640f088c40e4d4da34d4e641e91913, type: 3}
+      m_SpriteOverride: {fileID: -6672514810600983502, guid: 452746e03fc590f42b34de4e7342b360, type: 3}
     - m_Name: Avatar_walking cycle_00063_0
       m_Hash: 722495547
-      m_Sprite: {fileID: 7972849539745497383, guid: ab543755822655b47af0be4918aa4189, type: 3}
+      m_Sprite: {fileID: -6882095248963378933, guid: 3860baba424334845856839d96b19553, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7972849539745497383, guid: ab543755822655b47af0be4918aa4189, type: 3}
+      m_SpriteOverride: {fileID: -6882095248963378933, guid: 3860baba424334845856839d96b19553, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 34
   - m_Name: Jump
@@ -288,5 +288,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 1
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639009980901812799
+  m_ModificationHash: 639059768287047801
   m_Version: 1
