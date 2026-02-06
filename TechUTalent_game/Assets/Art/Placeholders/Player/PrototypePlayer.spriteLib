@@ -17,13 +17,273 @@ MonoBehaviour:
     m_Hash: 1008081451
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: character_yellow_idle_0
-      m_Hash: 818775668
-      m_Sprite: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
+    - m_Name: Idle animation_V2_00000_0
+      m_Hash: 945305711
+      m_Sprite: {fileID: -1208804333599139874, guid: 70a1b98c2bfba24458882a8fad5671c7, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1872269287318332333, guid: 8edd96e96b9ebdb418a3a96bc672a57c, type: 3}
+      m_SpriteOverride: {fileID: -1208804333599139874, guid: 70a1b98c2bfba24458882a8fad5671c7, type: 3}
+    - m_Name: Idle animation_V2_00001_0
+      m_Hash: 966414936
+      m_Sprite: {fileID: -5177111599078864981, guid: 970098d0ae822b143b28e97d3da418e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5177111599078864981, guid: 970098d0ae822b143b28e97d3da418e7, type: 3}
+    - m_Name: Idle animation_V2_00001_1
+      m_Hash: 245195470
+      m_Sprite: {fileID: -8669230978232176451, guid: 970098d0ae822b143b28e97d3da418e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8669230978232176451, guid: 970098d0ae822b143b28e97d3da418e7, type: 3}
+    - m_Name: Idle animation_V2_00002_0
+      m_Hash: 1004334081
+      m_Sprite: {fileID: 2208833155717011003, guid: c69f61c83f12c2343973914af55d8f3d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2208833155717011003, guid: c69f61c83f12c2343973914af55d8f3d, type: 3}
+    - m_Name: Idle animation_V2_00002_1
+      m_Hash: 215735447
+      m_Sprite: {fileID: 6052139756318946958, guid: c69f61c83f12c2343973914af55d8f3d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6052139756318946958, guid: c69f61c83f12c2343973914af55d8f3d, type: 3}
+    - m_Name: Idle animation_V2_00003_0
+      m_Hash: 975078966
+      m_Sprite: {fileID: 4533489650298314611, guid: d421cf06c5aa052439e00ec1fe3e7655, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4533489650298314611, guid: d421cf06c5aa052439e00ec1fe3e7655, type: 3}
+    - m_Name: Idle animation_V2_00003_1
+      m_Hash: 219788960
+      m_Sprite: {fileID: -949781180843158544, guid: d421cf06c5aa052439e00ec1fe3e7655, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -949781180843158544, guid: d421cf06c5aa052439e00ec1fe3e7655, type: 3}
+    - m_Name: Idle animation_V2_00004_0
+      m_Hash: 1062310067
+      m_Sprite: {fileID: -4054881225518955695, guid: c98ffcde8dacb8d4189d4d62f9aab640, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4054881225518955695, guid: c98ffcde8dacb8d4189d4d62f9aab640, type: 3}
+    - m_Name: Idle animation_V2_00004_1
+      m_Hash: 139894821
+      m_Sprite: {fileID: -1874046258873784523, guid: c98ffcde8dacb8d4189d4d62f9aab640, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1874046258873784523, guid: c98ffcde8dacb8d4189d4d62f9aab640, type: 3}
+    - m_Name: Idle animation_V2_00005_0
+      m_Hash: 1049885316
+      m_Sprite: {fileID: 6361668247041343629, guid: f3d43f54e6a86874585569ba8c929377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6361668247041343629, guid: f3d43f54e6a86874585569ba8c929377, type: 3}
+    - m_Name: Idle animation_V2_00005_1
+      m_Hash: 160746002
+      m_Sprite: {fileID: -2541218274545044846, guid: f3d43f54e6a86874585569ba8c929377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2541218274545044846, guid: f3d43f54e6a86874585569ba8c929377, type: 3}
+    - m_Name: Idle animation_V2_00006_0
+      m_Hash: 1020609757
+      m_Sprite: {fileID: -8957343221734518023, guid: 0fa829579a9f39542ba58b53ee81d43a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8957343221734518023, guid: 0fa829579a9f39542ba58b53ee81d43a, type: 3}
+    - m_Name: Idle animation_V2_00006_1
+      m_Hash: 198341707
+      m_Sprite: {fileID: -7261871907908290005, guid: 0fa829579a9f39542ba58b53ee81d43a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7261871907908290005, guid: 0fa829579a9f39542ba58b53ee81d43a, type: 3}
+    - m_Name: Idle animation_V2_00007_0
+      m_Hash: 1024929514
+      m_Sprite: {fileID: 4098114305372667503, guid: a56593383a32e9a4bb60172b6b0f34f8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4098114305372667503, guid: a56593383a32e9a4bb60172b6b0f34f8, type: 3}
+    - m_Name: Idle animation_V2_00007_1
+      m_Hash: 168828540
+      m_Sprite: {fileID: 1182867740445465087, guid: a56593383a32e9a4bb60172b6b0f34f8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1182867740445465087, guid: a56593383a32e9a4bb60172b6b0f34f8, type: 3}
+    - m_Name: Idle animation_V2_00008_0
+      m_Hash: 910911959
+      m_Sprite: {fileID: 1805698349798079338, guid: 2a34cf3cdd0d877458e36d51af346521, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1805698349798079338, guid: 2a34cf3cdd0d877458e36d51af346521, type: 3}
+    - m_Name: Idle animation_V2_00008_1
+      m_Hash: 21780801
+      m_Sprite: {fileID: 3882051318409207404, guid: 2a34cf3cdd0d877458e36d51af346521, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3882051318409207404, guid: 2a34cf3cdd0d877458e36d51af346521, type: 3}
+    - m_Name: Idle animation_V2_00009_0
+      m_Hash: 931726304
+      m_Sprite: {fileID: -3382981928116826145, guid: 961b85f4f23f7584cbfd8e5f61b0d911, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3382981928116826145, guid: 961b85f4f23f7584cbfd8e5f61b0d911, type: 3}
+    - m_Name: Idle animation_V2_00009_1
+      m_Hash: 9319286
+      m_Sprite: {fileID: 5888251548841283955, guid: 961b85f4f23f7584cbfd8e5f61b0d911, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5888251548841283955, guid: 961b85f4f23f7584cbfd8e5f61b0d911, type: 3}
+    - m_Name: Idle animation_V2_00010_0
+      m_Hash: 14966538
+      m_Sprite: {fileID: 5847020594848678941, guid: 0f115543503eedc42882d005a26e02c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5847020594848678941, guid: 0f115543503eedc42882d005a26e02c1, type: 3}
+    - m_Name: Idle animation_V2_00010_1
+      m_Hash: 937652124
+      m_Sprite: {fileID: 2769852694985937538, guid: 0f115543503eedc42882d005a26e02c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2769852694985937538, guid: 0f115543503eedc42882d005a26e02c1, type: 3}
+    - m_Name: Idle animation_V2_00011_0
+      m_Hash: 19281213
+      m_Sprite: {fileID: -7936671770723771454, guid: f4bee38822ae3be4490d012931898968, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7936671770723771454, guid: f4bee38822ae3be4490d012931898968, type: 3}
+    - m_Name: Idle animation_V2_00011_1
+      m_Hash: 908133803
+      m_Sprite: {fileID: 8153569539019786575, guid: f4bee38822ae3be4490d012931898968, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8153569539019786575, guid: f4bee38822ae3be4490d012931898968, type: 3}
+    - m_Name: Idle animation_V2_00012_0
+      m_Hash: 56658788
+      m_Sprite: {fileID: 3927798361942939040, guid: 12e320951a76b5e4a80cdd4320d7c063, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3927798361942939040, guid: 12e320951a76b5e4a80cdd4320d7c063, type: 3}
+    - m_Name: Idle animation_V2_00012_1
+      m_Hash: 879213554
+      m_Sprite: {fileID: 8473099955536969113, guid: 12e320951a76b5e4a80cdd4320d7c063, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8473099955536969113, guid: 12e320951a76b5e4a80cdd4320d7c063, type: 3}
+    - m_Name: Idle animation_V2_00013_0
+      m_Hash: 44228947
+      m_Sprite: {fileID: -6206762971651312731, guid: e2d338674f7712d418a263ee0d4dbde4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6206762971651312731, guid: e2d338674f7712d418a263ee0d4dbde4, type: 3}
+    - m_Name: Idle animation_V2_00013_1
+      m_Hash: 900059589
+      m_Sprite: {fileID: -7047312050557388824, guid: e2d338674f7712d418a263ee0d4dbde4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7047312050557388824, guid: e2d338674f7712d418a263ee0d4dbde4, type: 3}
+    - m_Name: Idle animation_V2_00014_0
+      m_Hash: 133035990
+      m_Sprite: {fileID: -3813085462705305720, guid: b5108d915ef2536489bf48f26632b6d8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3813085462705305720, guid: b5108d915ef2536489bf48f26632b6d8, type: 3}
+    - m_Name: Idle animation_V2_00014_1
+      m_Hash: 820692800
+      m_Sprite: {fileID: 5420797142447413214, guid: b5108d915ef2536489bf48f26632b6d8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5420797142447413214, guid: b5108d915ef2536489bf48f26632b6d8, type: 3}
+    - m_Name: Idle animation_V2_00015_0
+      m_Hash: 103783905
+      m_Sprite: {fileID: -3931616536137862467, guid: 672b2bddee884614fa89dd7a872e0489, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3931616536137862467, guid: 672b2bddee884614fa89dd7a872e0489, type: 3}
+    - m_Name: Idle animation_V2_00015_1
+      m_Hash: 824749431
+      m_Sprite: {fileID: 238281594654865756, guid: 672b2bddee884614fa89dd7a872e0489, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 238281594654865756, guid: 672b2bddee884614fa89dd7a872e0489, type: 3}
+    - m_Name: Idle animation_V2_00016_0
+      m_Hash: 73999288
+      m_Sprite: {fileID: 7164583935702891241, guid: 26829d3696fbdbc408abf6642ee71351, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7164583935702891241, guid: 26829d3696fbdbc408abf6642ee71351, type: 3}
+    - m_Name: Idle animation_V2_00016_1
+      m_Hash: 862851886
+      m_Sprite: {fileID: -6631516169516212457, guid: 26829d3696fbdbc408abf6642ee71351, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6631516169516212457, guid: 26829d3696fbdbc408abf6642ee71351, type: 3}
+    - m_Name: Idle animation_V2_00017_0
+      m_Hash: 95111567
+      m_Sprite: {fileID: -1438082040582167130, guid: 07a818507fb54224c8f9861eb6d440e6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1438082040582167130, guid: 07a818507fb54224c8f9861eb6d440e6, type: 3}
+    - m_Name: Idle animation_V2_00017_1
+      m_Hash: 850163993
+      m_Sprite: {fileID: -5344187815463590376, guid: 07a818507fb54224c8f9861eb6d440e6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5344187815463590376, guid: 07a818507fb54224c8f9861eb6d440e6, type: 3}
+    - m_Name: Idle animation_V2_00018_0
+      m_Hash: 251072178
+      m_Sprite: {fileID: -7739288535843949306, guid: b68e86822704b394aa18431576c46321, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7739288535843949306, guid: b68e86822704b394aa18431576c46321, type: 3}
+    - m_Name: Idle animation_V2_00018_1
+      m_Hash: 972045860
+      m_Sprite: {fileID: 8982867241049707066, guid: b68e86822704b394aa18431576c46321, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8982867241049707066, guid: b68e86822704b394aa18431576c46321, type: 3}
+    - m_Name: Idle animation_V2_00019_0
+      m_Hash: 255157381
+      m_Sprite: {fileID: 5315277689557530724, guid: 42a3028992660f94ba5d6b1cf780e0c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5315277689557530724, guid: 42a3028992660f94ba5d6b1cf780e0c5, type: 3}
+    - m_Name: Idle animation_V2_00019_1
+      m_Hash: 942822419
+      m_Sprite: {fileID: -894773825869562069, guid: 42a3028992660f94ba5d6b1cf780e0c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -894773825869562069, guid: 42a3028992660f94ba5d6b1cf780e0c5, type: 3}
+    - m_Name: Idle animation_V2_00020_0
+      m_Hash: 307359972
+      m_Sprite: {fileID: 2261509435948880164, guid: 731186ae3e0721f47a2b8bc410f80bb3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2261509435948880164, guid: 731186ae3e0721f47a2b8bc410f80bb3, type: 3}
+    - m_Name: Idle animation_V2_00020_1
+      m_Hash: 626442354
+      m_Sprite: {fileID: 4325979265318448520, guid: 731186ae3e0721f47a2b8bc410f80bb3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4325979265318448520, guid: 731186ae3e0721f47a2b8bc410f80bb3, type: 3}
+    - m_Name: Idle animation_V2_00021_0
+      m_Hash: 328440531
+      m_Sprite: {fileID: -6325905098908258439, guid: bd6541ee5c998e141b036d95511c00e3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6325905098908258439, guid: bd6541ee5c998e141b036d95511c00e3, type: 3}
+    - m_Name: Idle animation_V2_00021_1
+      m_Hash: 613722693
+      m_Sprite: {fileID: -3072490700361984569, guid: bd6541ee5c998e141b036d95511c00e3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3072490700361984569, guid: bd6541ee5c998e141b036d95511c00e3, type: 3}
+    - m_Name: Idle animation_V2_00022_0
+      m_Hash: 299181194
+      m_Sprite: {fileID: 4588808811530170511, guid: 6dda1aa8482701e498eebbcaab280f72, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4588808811530170511, guid: 6dda1aa8482701e498eebbcaab280f72, type: 3}
+    - m_Name: Idle animation_V2_00022_1
+      m_Hash: 651301916
+      m_Sprite: {fileID: -5668028548237970424, guid: 6dda1aa8482701e498eebbcaab280f72, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5668028548237970424, guid: 6dda1aa8482701e498eebbcaab280f72, type: 3}
+    - m_Name: Idle animation_V2_00023_0
+      m_Hash: 269962941
+      m_Sprite: {fileID: -5993297533793256192, guid: 4bec20c123b141d4ea98a3ea323876b6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5993297533793256192, guid: 4bec20c123b141d4ea98a3ea323876b6, type: 3}
+    - m_Name: Idle animation_V2_00023_1
+      m_Hash: 655392299
+      m_Sprite: {fileID: -6621495420067382131, guid: 4bec20c123b141d4ea98a3ea323876b6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6621495420067382131, guid: 4bec20c123b141d4ea98a3ea323876b6, type: 3}
+    - m_Name: Idle animation_V2_00024_0
+      m_Hash: 358111288
+      m_Sprite: {fileID: -4919723508159097277, guid: 80c09ca83f1def04d8095cd6d55bcfa3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4919723508159097277, guid: 80c09ca83f1def04d8095cd6d55bcfa3, type: 3}
+    - m_Name: Idle animation_V2_00025_0
+      m_Hash: 345649679
+      m_Sprite: {fileID: 984741552436775377, guid: 68234b8a2a921e546b57c4d70e9834bb, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 984741552436775377, guid: 68234b8a2a921e546b57c4d70e9834bb, type: 3}
+    - m_Name: Idle animation_V2_00026_0
+      m_Hash: 383552598
+      m_Sprite: {fileID: 6144698930699654241, guid: 0f1eef986c83d5e4aaaf273d482661db, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6144698930699654241, guid: 0f1eef986c83d5e4aaaf273d482661db, type: 3}
+    - m_Name: Idle animation_V2_00027_0
+      m_Hash: 387901025
+      m_Sprite: {fileID: -7205080787189742550, guid: a88caf177cbad7f46b4e240c573f9fae, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7205080787189742550, guid: a88caf177cbad7f46b4e240c573f9fae, type: 3}
+    - m_Name: Idle animation_V2_00028_0
+      m_Hash: 474128732
+      m_Sprite: {fileID: 3601531786106557521, guid: 09a2468b7a9d8ed488031b17e1ca1d3a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3601531786106557521, guid: 09a2468b7a9d8ed488031b17e1ca1d3a, type: 3}
+    - m_Name: Idle animation_V2_00029_0
+      m_Hash: 494979947
+      m_Sprite: {fileID: -7761892437379023578, guid: a64c8702670d82c4cb95575a9f5e2bc7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7761892437379023578, guid: a64c8702670d82c4cb95575a9f5e2bc7, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 1
+    m_EntryOverrideCount: 53
   - m_Name: Walk
     m_Hash: 765711723
     m_CategoryList: []
@@ -204,89 +464,124 @@ MonoBehaviour:
     m_Hash: 125937960
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: Avatar_Jumping_00000_0
-      m_Hash: 843343521
-      m_Sprite: {fileID: 7082758270338940903, guid: da56d80d72e1a6248a7816c2dca86d19, type: 3}
+    - m_Name: Jump_V4_00000_0
+      m_Hash: 460012118
+      m_Sprite: {fileID: 679746684015574819, guid: 8043a9ad20a2d934e9e976327c21da39, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7082758270338940903, guid: da56d80d72e1a6248a7816c2dca86d19, type: 3}
-    - m_Name: Avatar_Jumping_00002_0
-      m_Hash: 834712271
-      m_Sprite: {fileID: -7064861931095632521, guid: bd6532206816da64f8efca0ceb2194f6, type: 3}
+      m_SpriteOverride: {fileID: 679746684015574819, guid: 8043a9ad20a2d934e9e976327c21da39, type: 3}
+    - m_Name: Jump_V4_00001_0
+      m_Hash: 447303777
+      m_Sprite: {fileID: -6032856062708154111, guid: ccc841c4307cd0f49947130aa14a8c86, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -7064861931095632521, guid: bd6532206816da64f8efca0ceb2194f6, type: 3}
-    - m_Name: Avatar_Jumping_00004_0
-      m_Hash: 894291581
-      m_Sprite: {fileID: 1767940241129590764, guid: 5476b682555030d45b5542aa3d2e68bb, type: 3}
+      m_SpriteOverride: {fileID: -6032856062708154111, guid: ccc841c4307cd0f49947130aa14a8c86, type: 3}
+    - m_Name: Jump_V4_00002_0
+      m_Hash: 418377272
+      m_Sprite: {fileID: -4218701306857307018, guid: 2bc2a8986ff630a48882d21988b37fbf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1767940241129590764, guid: 5476b682555030d45b5542aa3d2e68bb, type: 3}
-    - m_Name: Avatar_Jumping_00006_0
-      m_Hash: 919149075
-      m_Sprite: {fileID: 3512367051589038807, guid: b3a5ed7b68edf9c4ea1be8816700dd02, type: 3}
+      m_SpriteOverride: {fileID: -4218701306857307018, guid: 2bc2a8986ff630a48882d21988b37fbf, type: 3}
+    - m_Name: Jump_V4_00003_0
+      m_Hash: 422413327
+      m_Sprite: {fileID: -5873567694408288448, guid: 268c13256a2665c4cbd75077ff1e8de2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 3512367051589038807, guid: b3a5ed7b68edf9c4ea1be8816700dd02, type: 3}
-    - m_Name: Avatar_Jumping_00008_0
-      m_Hash: 1012348697
-      m_Sprite: {fileID: -1598281964632457780, guid: f8c0fc09c7133f64bb10290fbab911d4, type: 3}
+      m_SpriteOverride: {fileID: -5873567694408288448, guid: 268c13256a2665c4cbd75077ff1e8de2, type: 3}
+    - m_Name: Jump_V4_00004_0
+      m_Hash: 476222090
+      m_Sprite: {fileID: -2386839988839668334, guid: 6f1e8e5ee3e3c4d4b8e6b7094ea7ddc5, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -1598281964632457780, guid: f8c0fc09c7133f64bb10290fbab911d4, type: 3}
-    - m_Name: Avatar_Jumping_00010_0
-      m_Hash: 184025540
-      m_Sprite: {fileID: -3148154929766975470, guid: deb9e78aecc83cd42bd791506116df17, type: 3}
+      m_SpriteOverride: {fileID: -2386839988839668334, guid: 6f1e8e5ee3e3c4d4b8e6b7094ea7ddc5, type: 3}
+    - m_Name: Jump_V4_00005_0
+      m_Hash: 497088701
+      m_Sprite: {fileID: -3952350178197610223, guid: fe4ff7cb7931b2343a45ac915cf15cb5, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3148154929766975470, guid: deb9e78aecc83cd42bd791506116df17, type: 3}
-    - m_Name: Avatar_Jumping_00012_0
-      m_Hash: 159176106
-      m_Sprite: {fileID: -2459091389398091606, guid: 61c7fef5296eac34a811104ee99c0106, type: 3}
+      m_SpriteOverride: {fileID: -3952350178197610223, guid: fe4ff7cb7931b2343a45ac915cf15cb5, type: 3}
+    - m_Name: Jump_V4_00006_0
+      m_Hash: 535185124
+      m_Sprite: {fileID: -7101211687847382681, guid: 62a797b01c81a724697522b10d48d4cf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2459091389398091606, guid: 61c7fef5296eac34a811104ee99c0106, type: 3}
-    - m_Name: Avatar_Jumping_00014_0
-      m_Hash: 233941272
-      m_Sprite: {fileID: -5358166184671473028, guid: 419e71432d2c4a740af36d523260844d, type: 3}
+      m_SpriteOverride: {fileID: -7101211687847382681, guid: 62a797b01c81a724697522b10d48d4cf, type: 3}
+    - m_Name: Jump_V4_00007_0
+      m_Hash: 505687251
+      m_Sprite: {fileID: -7949293693915920706, guid: ddcff525e97b87c439777718afed2262, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -5358166184671473028, guid: 419e71432d2c4a740af36d523260844d, type: 3}
-    - m_Name: Avatar_Jumping_00016_0
-      m_Hash: 242580854
-      m_Sprite: {fileID: 8939012551618258383, guid: 76401936d0636674e8a39a5d49a984f2, type: 3}
+      m_SpriteOverride: {fileID: -7949293693915920706, guid: ddcff525e97b87c439777718afed2262, type: 3}
+    - m_Name: Jump_V4_00008_0
+      m_Hash: 360213486
+      m_Sprite: {fileID: -245952559775420199, guid: 3b93f849d79e11244a664c9a2bcbfc3d, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 8939012551618258383, guid: 76401936d0636674e8a39a5d49a984f2, type: 3}
-    - m_Name: Avatar_Jumping_00018_0
-      m_Hash: 82530428
-      m_Sprite: {fileID: -2023126568214444375, guid: 3280509d7cb478441aef681436b3bc87, type: 3}
+      m_SpriteOverride: {fileID: -245952559775420199, guid: 3b93f849d79e11244a664c9a2bcbfc3d, type: 3}
+    - m_Name: Jump_V4_00009_0
+      m_Hash: 347734489
+      m_Sprite: {fileID: 171556343513989383, guid: 633097ad5c6a921419fbfba10b2a2aa2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2023126568214444375, guid: 3280509d7cb478441aef681436b3bc87, type: 3}
-    - m_Name: Avatar_Jumping_00020_0
-      m_Hash: 407744042
-      m_Sprite: {fileID: -8014520730438196224, guid: 700f826dd23ea484db37d3d6aa1397c3, type: 3}
+      m_SpriteOverride: {fileID: 171556343513989383, guid: 633097ad5c6a921419fbfba10b2a2aa2, type: 3}
+    - m_Name: Jump_V4_00010_0
+      m_Hash: 601316659
+      m_Sprite: {fileID: 4180823245115568227, guid: 966e2127ce17da243a57a450445ee237, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -8014520730438196224, guid: 700f826dd23ea484db37d3d6aa1397c3, type: 3}
-    - m_Name: Avatar_Jumping_00022_0
-      m_Hash: 466188868
-      m_Sprite: {fileID: -7302687308211564667, guid: 957a6d441496b154db2c35644baa8d86, type: 3}
+      m_SpriteOverride: {fileID: 4180823245115568227, guid: 966e2127ce17da243a57a450445ee237, type: 3}
+    - m_Name: Jump_V4_00011_0
+      m_Hash: 571815684
+      m_Sprite: {fileID: -6793746127555841607, guid: c623bb804494ad34d9052137c2b19f63, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -7302687308211564667, guid: 957a6d441496b154db2c35644baa8d86, type: 3}
-    - m_Name: Avatar_Jumping_00024_0
-      m_Hash: 524551926
-      m_Sprite: {fileID: 2554161595168739819, guid: 877e09c84070c364d8d35057e214559e, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: 2554161595168739819, guid: 877e09c84070c364d8d35057e214559e, type: 3}
-    - m_Name: Avatar_Jumping_00026_0
-      m_Hash: 482398872
-      m_Sprite: {fileID: -8016799148918815379, guid: 6178abbfc933e7746b80b7e513f7fae1, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: -8016799148918815379, guid: 6178abbfc933e7746b80b7e513f7fae1, type: 3}
+      m_SpriteOverride: {fileID: -6793746127555841607, guid: c623bb804494ad34d9052137c2b19f63, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 14
+    m_EntryOverrideCount: 12
   - m_Name: Fall
     m_Hash: 459436082
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: Avatar_Jumping_00028_0
-      m_Hash: 375324562
-      m_Sprite: {fileID: -943328255852547695, guid: 3d8a1b297e761a341bea21cea601ca73, type: 3}
+    - m_Name: Jump_V4_00012_0
+      m_Hash: 542345565
+      m_Sprite: {fileID: 2971180097637005869, guid: 866695f8508b63c419dae49fd999ba8b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -943328255852547695, guid: 3d8a1b297e761a341bea21cea601ca73, type: 3}
+      m_SpriteOverride: {fileID: 2971180097637005869, guid: 866695f8508b63c419dae49fd999ba8b, type: 3}
+    - m_Name: Jump_V4_00013_0
+      m_Hash: 563209066
+      m_Sprite: {fileID: 5165165548995166800, guid: 45d8b82f93fbf73489981c187209044b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5165165548995166800, guid: 45d8b82f93fbf73489981c187209044b, type: 3}
+    - m_Name: Jump_V4_00014_0
+      m_Hash: 618591727
+      m_Sprite: {fileID: 2360225832244704899, guid: 57971886192b06f4bb4de24ae3f6a9d3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2360225832244704899, guid: 57971886192b06f4bb4de24ae3f6a9d3, type: 3}
+    - m_Name: Jump_V4_00015_0
+      m_Hash: 622632920
+      m_Sprite: {fileID: 2236202704676800499, guid: 8e6ba2ba1c438df4daa85af88609942f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2236202704676800499, guid: 8e6ba2ba1c438df4daa85af88609942f, type: 3}
+    - m_Name: Jump_V4_00016_0
+      m_Hash: 660218241
+      m_Sprite: {fileID: -7748878560542541745, guid: 853d46f474dfb384db4ff9157a7078c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7748878560542541745, guid: 853d46f474dfb384db4ff9157a7078c5, type: 3}
+    - m_Name: Jump_V4_00017_0
+      m_Hash: 647515062
+      m_Sprite: {fileID: 2627996941562510203, guid: 2a80112b0190745448b762b9c9636959, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2627996941562510203, guid: 2a80112b0190745448b762b9c9636959, type: 3}
+    - m_Name: Jump_V4_00018_0
+      m_Hash: 767822987
+      m_Sprite: {fileID: 2713215168359371530, guid: 0aa5cc53a69b2914fbfe633a80dde06e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2713215168359371530, guid: 0aa5cc53a69b2914fbfe633a80dde06e, type: 3}
+    - m_Name: Jump_V4_00019_0
+      m_Hash: 738617020
+      m_Sprite: {fileID: -3576839252914284455, guid: 3017cc447d137bf44bc89efe8c64ba5a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3576839252914284455, guid: 3017cc447d137bf44bc89efe8c64ba5a, type: 3}
+    - m_Name: Jump_V4_00020_0
+      m_Hash: 828568285
+      m_Sprite: {fileID: -1362408745302714073, guid: 02d6fbf1923da564ba5c8815ecc4e563, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1362408745302714073, guid: 02d6fbf1923da564ba5c8815ecc4e563, type: 3}
+    - m_Name: Jump_V4_00021_0
+      m_Hash: 815831274
+      m_Sprite: {fileID: -3724965069889016453, guid: 9d00ea0fb87ca874e8c44e3c43dc4736, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3724965069889016453, guid: 9d00ea0fb87ca874e8c44e3c43dc4736, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 1
+    m_EntryOverrideCount: 10
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639059768287047801
+  m_ModificationHash: 639059792464566241
   m_Version: 1
